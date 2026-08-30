@@ -433,86 +433,98 @@
     }
     footer p { margin-bottom: 6px; }
 
-    /* ----- adblock overlay (fixed) ----- */
-    .adblock-overlay {
+    /* ----- ad status toast ----- */
+    .ad-toast {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 11000;
+      width: min(390px, calc(100vw - 32px));
+      padding: 14px 16px;
+      border: 1px solid #f5d7a8;
+      border-radius: 16px;
+      background: #fffaf0;
+      color: #7a4b00;
+      box-shadow: 0 18px 50px rgba(16,24,40,.16);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      animation: toastIn .22s ease-out;
+    }
+    .ad-toast .toast-icon {
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: #fff0cf;
+      font-weight: 900;
+    }
+    .ad-toast strong { display:block; font-size:13px; margin-bottom:3px; }
+    .ad-toast span { display:block; font-size:12px; line-height:1.45; color:#8a640f; }
+    .toast-close {
+      margin-left:auto;
+      border:0;
+      background:transparent;
+      color:#8a640f;
+      cursor:pointer;
+      font-size:18px;
+      line-height:1;
+      padding:2px;
+    }
+    @keyframes toastIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+
+    /* ----- ad gate modal ----- */
+    .ad-gate {
       position: fixed;
       inset: 0;
       z-index: 10000;
       display: grid;
       place-items: center;
-      padding: 20px;
-      background: rgba(15,23,42,0.6);
-      backdrop-filter: blur(8px);
-      transition: opacity 0.2s;
+      padding: 18px;
+      background: rgba(15,23,42,.58);
+      backdrop-filter: blur(7px);
     }
-    .adblock-overlay.hidden { display: none !important; }
-    .adblock-card {
-      position: relative;
-      width: min(440px, 100%);
-      padding: 30px 24px 24px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.6);
-      border-radius: 28px;
-      background: #ffffff;
-      box-shadow: 0 30px 90px rgba(0,0,0,0.2);
+    .ad-gate.hidden { display:none !important; }
+    .ad-gate-card {
+      width:min(620px, 100%);
+      max-height:min(760px, calc(100vh - 36px));
+      overflow:auto;
+      border:1px solid rgba(255,255,255,.7);
+      border-radius:28px;
+      background:#fff;
+      box-shadow:0 35px 100px rgba(0,0,0,.24);
+      padding:24px;
     }
-    .adblock-icon {
-      width: 56px;
-      height: 56px;
-      margin: 0 auto 14px;
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      background: #fff7e6;
-      color: #b54708;
-      font-size: 24px;
-      font-weight: 900;
+    .ad-gate-head { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:8px; }
+    .ad-gate-head h2 { font-size:1.3rem; letter-spacing:-.02em; }
+    .ad-gate-close {
+      width:38px; height:38px; border:1px solid #e4e7ec; border-radius:12px;
+      background:#fff; cursor:pointer; font-size:20px; color:#667085;
     }
-    .adblock-card .section-kicker { margin-bottom: 6px; }
-    .adblock-card h2 {
-      font-size: 1.4rem;
-      letter-spacing: -0.02em;
-      margin-bottom: 10px;
-      font-weight: 700;
+    .ad-gate-copy { color:#667085; font-size:13px; line-height:1.55; margin-bottom:16px; }
+    .gate-ad {
+      min-height:110px; border:1px solid #eaecf0; border-radius:18px; background:#f8fafc;
+      display:flex; align-items:center; justify-content:center; overflow:hidden; margin-bottom:16px;
     }
-    .adblock-card p {
-      color: #667085;
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 18px;
+    .gate-ad .ad-label { margin:0; }
+    .gate-actions { display:flex; gap:10px; }
+    .gate-continue {
+      flex:1; min-height:50px; border:0; border-radius:14px; background:#111827; color:#fff;
+      font-weight:800; cursor:pointer; font-size:14px;
     }
-    .adblock-card small {
-      display: block;
-      color: #98a2b3;
-      font-size: 11px;
-      line-height: 1.5;
-      margin-top: 14px;
+    .gate-continue:hover { background:#2a3441; }
+    .gate-cancel {
+      min-height:50px; padding:0 18px; border:1px solid #e4e7ec; border-radius:14px;
+      background:#fff; color:#344054; font-weight:700; cursor:pointer;
     }
-    /* close button removed */
-    .enable-ads-btn {
-      width: 100%;
-      min-height: 50px;
-      border: 0;
-      border-radius: 14px;
-      background: #111827;
-      color: #fff;
-      font-weight: 800;
-      cursor: pointer;
-      font-size: 14px;
-      transition: 0.2s;
-    }
-    .enable-ads-btn:hover {
-      background: #2a3441;
-    }
-    .download-btn.ad-disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-    .download-btn.ad-disabled::after {
-      content: " • Ads required";
-      font-size: 10px;
-      font-weight: 500;
-      opacity: 0.8;
+    .gate-status { margin-top:10px; text-align:center; color:#98a2b3; font-size:11px; }
+    @media (max-width: 520px) {
+      .ad-toast { right:16px; bottom:16px; }
+      .ad-gate-card { padding:18px; border-radius:22px; }
+      .gate-actions { flex-direction:column; }
+      .gate-cancel { width:100%; }
     }
 
     /* ----- responsive ----- */
@@ -566,16 +578,40 @@
 
 <div class="page">
 
-  <!-- adblock overlay (no close button) -->
-  <div id="adBlockNotice" class="adblock-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="adBlockTitle">
-    <div class="adblock-card">
-      <div class="adblock-icon">✓</div>
-      <span class="section-kicker">ADS HELP KEEP THIS TOOL FREE</span>
-      <h2 id="adBlockTitle">Please enable ads to download</h2>
-      <p>It looks like ads are being blocked in your browser. Please disable your ad blocker or allow ads for this site, then try again.</p>
-      <button type="button" id="enableAdsBtn" class="enable-ads-btn">I've enabled ads — Continue</button>
-      <small>After enabling ads, refresh the page if the download button is still disabled.</small>
+  <!-- Ad gate: shown after the main Download button is clicked. It never blocks downloads because of ad-blocking. -->
+  <div id="adGate" class="ad-gate hidden" role="dialog" aria-modal="true" aria-labelledby="adGateTitle">
+    <div class="ad-gate-card">
+      <div class="ad-gate-head">
+        <h2 id="adGateTitle">Support this free downloader</h2>
+        <button type="button" id="adGateClose" class="ad-gate-close" aria-label="Close">×</button>
+      </div>
+      <p class="ad-gate-copy">An advertisement is shown before your download options. If your browser blocks the ad, that is okay — you can still continue.</p>
+      <div class="gate-ad">
+        <div>
+          <div class="ad-label">Advertisement</div>
+          <script>
+            atOptions = {
+              'key' : '281a994327b8eb88a8ef6183e80bf0c5',
+              'format' : 'iframe',
+              'height' : 100,
+              'width' : 300,
+              'params' : {}
+            };
+          </script>
+          <script id="gateAdScript" src="https://missiondifferentyawn.com/281a994327b8eb88a8ef6183e80bf0c5/invoke.js"></script>
+        </div>
+      </div>
+      <div class="gate-actions">
+        <button type="button" id="gateContinue" class="gate-continue">Continue to download</button>
+        <button type="button" id="gateCancel" class="gate-cancel">Cancel</button>
+      </div>
+      <div id="gateStatus" class="gate-status">Your download will start after you continue.</div>
     </div>
+  </div>
+  <div id="adToast" class="ad-toast hidden" role="status" aria-live="polite">
+    <div class="toast-icon">!</div>
+    <div><strong>Ad blocker detected</strong><span>Ads may not load, but you can still download your video.</span></div>
+    <button type="button" class="toast-close" id="toastClose" aria-label="Close">×</button>
   </div>
 
   <main>
@@ -745,7 +781,6 @@
 <script>
   const API_URL = "https://apiinsta.anujkattel.com.np";
 
-  // elements
   const urlInput = document.getElementById("urlInput");
   const downloadBtn = document.getElementById("downloadBtn");
   const buttonText = document.getElementById("buttonText");
@@ -757,9 +792,19 @@
   const videoUploader = document.getElementById("videoUploader");
   const saveButton = document.getElementById("saveButton");
 
-  let currentVideoUrl = null;
+  const adGate = document.getElementById("adGate");
+  const adGateClose = document.getElementById("adGateClose");
+  const gateContinue = document.getElementById("gateContinue");
+  const gateCancel = document.getElementById("gateCancel");
+  const gateStatus = document.getElementById("gateStatus");
+  const adToast = document.getElementById("adToast");
+  const toastClose = document.getElementById("toastClose");
 
-  // helpers
+  let currentVideoUrl = null;
+  let pendingUrl = null;
+  let downloadInProgress = false;
+  let toastTimer = null;
+
   function showError(msg) {
     errorMessage.textContent = msg;
     errorMessage.classList.remove("hidden");
@@ -768,9 +813,7 @@
     errorMessage.textContent = "";
     errorMessage.classList.add("hidden");
   }
-  function hideResult() {
-    resultCard.classList.add("hidden");
-  }
+  function hideResult() { resultCard.classList.add("hidden"); }
   function setLoading(loading) {
     downloadBtn.disabled = loading;
     if (loading) {
@@ -781,24 +824,51 @@
       loader.classList.add("hidden");
     }
   }
-  function isInstagramUrl(url) {
+  function isInstagramUrl(value) {
     try {
-      const parsed = new URL(url);
-      const host = parsed.hostname.toLowerCase();
-      return host === "instagram.com" || host === "www.instagram.com" || host === "m.instagram.com";
+      const parsed = new URL(value);
+      const host = parsed.hostname.toLowerCase().replace(/^www\./, "");
+      return (host === "instagram.com" || host === "instagram.co") &&
+        (/^\/(reel|reels|p|tv)\//i.test(parsed.pathname));
     } catch { return false; }
   }
 
-  // main download
-  async function downloadVideo() {
+  function showAdToast() {
+    adToast.classList.remove("hidden");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => adToast.classList.add("hidden"), 6000);
+  }
+  function closeAdGate() {
+    adGate.classList.add("hidden");
+    pendingUrl = null;
+  }
+  function openAdGate(url) {
+    pendingUrl = url;
+    gateStatus.textContent = "Your download will start after you continue.";
+    gateContinue.disabled = false;
+    gateContinue.textContent = "Continue to download";
+    adGate.classList.remove("hidden");
+  }
+
+  // Main button: validate URL, show the ad gate, then reveal/download the options.
+  function requestDownload() {
+    if (downloadInProgress) return;
     const url = urlInput.value.trim();
     clearError();
     if (!url) { showError("Please paste an Instagram URL."); return; }
     if (!isInstagramUrl(url)) { showError("Please enter a valid Instagram Reel or video URL."); return; }
+    openAdGate(url);
+  }
 
+  async function downloadVideo(url) {
+    if (downloadInProgress) return;
+    downloadInProgress = true;
     setLoading(true);
     hideResult();
-    if (currentVideoUrl) { URL.revokeObjectURL(currentVideoUrl); currentVideoUrl = null; }
+    if (currentVideoUrl) {
+      URL.revokeObjectURL(currentVideoUrl);
+      currentVideoUrl = null;
+    }
 
     try {
       const response = await fetch(`${API_URL}/api/download/video`, {
@@ -809,7 +879,11 @@
 
       if (!response.ok) {
         let msg = `Download failed (${response.status})`;
-        try { const data = await response.json(); if (data.error) msg = data.error; if (data.message) msg = data.message; } catch {}
+        try {
+          const data = await response.json();
+          if (data.error) msg = data.error;
+          if (data.message) msg = data.message;
+        } catch {}
         throw new Error(msg);
       }
 
@@ -818,25 +892,37 @@
 
       currentVideoUrl = URL.createObjectURL(blob);
       videoPreview.src = currentVideoUrl;
+      videoPreview.load();
       videoTitle.textContent = "Instagram Video";
-      videoUploader.textContent = "Video is ready";
+      videoUploader.textContent = `${(blob.size / 1024 / 1024).toFixed(2)} MB • Video + audio ready`;
       saveButton.href = currentVideoUrl;
       saveButton.download = `instagram-video-${Date.now()}.mp4`;
       resultCard.classList.remove("hidden");
       resultCard.scrollIntoView({ behavior: "smooth", block: "center" });
+      gateStatus.textContent = "Download options are ready.";
     } catch (err) {
       console.error("Download error:", err);
       showError(err.message || "Something went wrong while downloading.");
     } finally {
       setLoading(false);
+      downloadInProgress = false;
     }
   }
 
-  // event listeners
-  downloadBtn.addEventListener("click", downloadVideo);
-  urlInput.addEventListener("keydown", (e) => { if (e.key === "Enter") downloadVideo(); });
+  gateContinue.addEventListener("click", async () => {
+    const url = pendingUrl;
+    if (!url || downloadInProgress) return;
+    adGate.classList.add("hidden");
+    pendingUrl = null;
+    await downloadVideo(url);
+  });
+  gateCancel.addEventListener("click", closeAdGate);
+  adGateClose.addEventListener("click", closeAdGate);
+  adToast.addEventListener("click", (e) => { if (e.target === adToast) adToast.classList.add("hidden"); });
+  toastClose.addEventListener("click", () => adToast.classList.add("hidden"));
 
-  // cleanup
+  downloadBtn.addEventListener("click", requestDownload);
+  urlInput.addEventListener("keydown", (e) => { if (e.key === "Enter") requestDownload(); });
   window.addEventListener("beforeunload", () => { if (currentVideoUrl) URL.revokeObjectURL(currentVideoUrl); });
 
   // ----- responsive ad helper (mobile banner) -----
@@ -868,63 +954,30 @@
     window.addEventListener('resize', renderResponsiveBanner);
   })();
 
-  // ----- adblock detection (soft) with reload on continue -----
+  // ----- soft ad-block detection: toast only, never disables downloading -----
   (function() {
-    const notice = document.getElementById('adBlockNotice');
-    const continueBtn = document.getElementById('enableAdsBtn');
-    const downloadBtnEl = document.getElementById('downloadBtn');
+    const adScripts = Array.from(document.querySelectorAll('script[src*="missiondifferentyawn.com"]'));
+    let detected = false;
+    const reportBlocked = () => {
+      if (detected) return;
+      detected = true;
+      showAdToast();
+    };
 
-    if (!notice || !downloadBtnEl || !continueBtn) return;
-    let adsBlocked = false;
+    adScripts.forEach(script => script.addEventListener('error', reportBlocked, { once: true }));
 
-    function disableDownload() {
-      adsBlocked = true;
-      downloadBtnEl.classList.add('ad-disabled');
-      downloadBtnEl.setAttribute('aria-disabled', 'true');
-    }
-    function enableDownload() {
-      adsBlocked = false;
-      downloadBtnEl.classList.remove('ad-disabled');
-      downloadBtnEl.removeAttribute('aria-disabled');
-      notice.classList.add('hidden');
-    }
-    function showNotice() {
-      disableDownload();
-      notice.classList.remove('hidden');
-    }
-
-    // detect ad script errors
-    document.querySelectorAll('script[src*="missiondifferentyawn.com"]').forEach(script => {
-      script.addEventListener('error', showNotice, { once: true });
-    });
-
-    // bait
     const bait = document.createElement('div');
     bait.className = 'ad ad-banner adsbox ad-placeholder';
     bait.setAttribute('aria-hidden', 'true');
-    bait.style.cssText = 'position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important;';
+    bait.style.cssText = 'position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important;pointer-events:none!important;';
     document.body.appendChild(bait);
+
     setTimeout(() => {
       const style = window.getComputedStyle(bait);
       const hidden = style.display === 'none' || style.visibility === 'hidden' || bait.offsetHeight === 0;
-      if (hidden) showNotice();
+      if (hidden) reportBlocked();
       bait.remove();
-    }, 1200);
-
-    // block download if adblock detected
-    downloadBtnEl.addEventListener('click', (e) => {
-      if (adsBlocked) { e.preventDefault(); showNotice(); }
-    }, true);
-
-    // continue button: reload page after a short delay
-    continueBtn.addEventListener('click', function() {
-      // first, hide the overlay and enable download (optimistic)
-      enableDownload();
-      // then reload the page after a tiny delay to let ads load
-      setTimeout(() => {
-        window.location.reload();
-      }, 300);
-    });
+    }, 1400);
   })();
 </script>
 
