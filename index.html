@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram Video Downloader — Download Reels & Videos Online</title>
-  <meta name="description" content="Download Instagram videos and Reels online with a fast, simple and mobile-friendly Instagram video downloader. Paste a public Instagram video or Reel URL to get started.">
-  <meta name="keywords" content="Instagram video downloader, Instagram Reel downloader, download Instagram videos, Reel downloader, Instagram downloader">
+  <title>Download Instagram Reels & Videos Online Free | Instagram Downloader</title>
+  <meta name="description"
+    content="Download Instagram videos and Reels online for free. Fast, simple, and mobile-friendly Instagram video downloader. Paste any public Instagram Reel or video URL and save instantly.">
+  <meta name="keywords"
+    content="Instagram video downloader, Instagram Reel downloader, download Instagram videos, Reel downloader, Instagram downloader, save Instagram videos, Instagram video saver">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="author" content="Instagram Video Downloader">
-  <link rel="canonical" href="https://apiinsta.anujkattel.com.np/">
+  <meta name="author" content="Anuj Kattel">
+  <link rel="canonical" href="https://instagram.anujkattel.com.np/">
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Instagram Video Downloader — Download Reels & Videos">
-  <meta property="og:description" content="Fast and simple online Instagram video and Reel downloader.">
-  <meta property="og:url" content="https://apiinsta.anujkattel.com.np/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="Instagram Video Downloader — Download Reels & Videos Free">
+  <meta property="og:description"
+    content="Download Instagram videos and Reels online for free. Fast, simple, and mobile-friendly Instagram video downloader.">
+  <meta property="og:url" content="https://instagram.anujkattel.com.np/">
+  <meta property="og:image" content="https://instagram.anujkattel.com.np/og-image.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Instagram Video Downloader">
-  <meta name="twitter:description" content="Download Instagram videos and Reels online.">
+  <meta name="twitter:description" content="Download Instagram videos and Reels online for free.">
   <style>
-    /* ----- reset & base ----- */
+    /* =========================================================
+       RESET & BASE
+    ========================================================= */
     :root {
       --ink: #15132b;
       --muted: #6f6c86;
@@ -29,14 +38,22 @@
       --accent: #e956a6;
       --shadow: 0 24px 70px rgba(66, 45, 150, 0.12);
     }
-    * { box-sizing: border-box; margin:0; padding:0; }
-    html { scroll-behavior:smooth; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      min-height:100vh;
+      min-height: 100vh;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at 8% 4%, rgba(228, 211, 255, .62), transparent 29rem),
-        radial-gradient(circle at 92% 17%, rgba(255, 220, 238, .62), transparent 25rem),
+      background: radial-gradient(circle at 8% 4%, rgba(228, 211, 255, 0.62), transparent 29rem),
+        radial-gradient(circle at 92% 17%, rgba(255, 220, 238, 0.62), transparent 25rem),
         linear-gradient(180deg, #fbfaff 0%, #f7f8fd 56%, #fdfbff 100%);
       color: var(--ink);
       display: flex;
@@ -44,52 +61,78 @@
       align-items: center;
       padding: 0 1rem 2rem;
     }
+
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       pointer-events: none;
-      opacity: .24;
-      background-image: radial-gradient(rgba(100, 74, 180, .12) .7px, transparent .7px);
+      opacity: 0.24;
+      background-image: radial-gradient(rgba(100, 74, 180, 0.12) 0.7px, transparent 0.7px);
       background-size: 20px 20px;
       mask-image: linear-gradient(to bottom, black, transparent 75%);
     }
-    a { color:inherit; text-decoration: none; }
-    button, input { font: inherit; }
-    button:focus-visible, input:focus-visible, a:focus-visible, summary:focus-visible {
-      outline: 3px solid rgba(118, 87, 255, .35);
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    a:focus-visible {
+      outline: 3px solid rgba(118, 87, 255, 0.35);
       outline-offset: 3px;
     }
 
-    /* ----- main container ----- */
+    .hidden {
+      display: none !important;
+    }
+
+    /* =========================================================
+       MAIN CONTAINER
+    ========================================================= */
     .page {
       width: 100%;
-      max-width: 1180px;
+      max-width: 1200px;
       position: relative;
       z-index: 1;
     }
 
-    /* ----- hero / shell ----- */
+    /* =========================================================
+       HERO
+    ========================================================= */
     .hero {
       text-align: center;
       padding: clamp(2rem, 6vw, 4.8rem) 0 1.8rem;
     }
+
     .badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 8px 14px;
-      border: 1px solid rgba(118, 87, 255, .16);
-      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(118, 87, 255, 0.16);
+      background: rgba(255, 255, 255, 0.72);
       border-radius: 999px;
       font-size: 11px;
       font-weight: 800;
       color: #6b5aa8;
       margin-bottom: 22px;
       letter-spacing: 0.08em;
-      box-shadow: 0 8px 24px rgba(91, 63, 184, .08);
+      box-shadow: 0 8px 24px rgba(91, 63, 184, 0.08);
     }
-    .badge span { color: var(--accent); font-size: 14px; }
+
+    .badge span {
+      color: var(--accent);
+      font-size: 14px;
+    }
+
     .logo {
       width: 78px;
       height: 78px;
@@ -101,17 +144,19 @@
       color: #fff;
       font-size: 30px;
       font-weight: 850;
-      letter-spacing: -.08em;
-      box-shadow: 0 18px 38px rgba(121, 76, 222, .26), inset 0 1px 0 rgba(255,255,255,.55);
+      letter-spacing: -0.08em;
+      box-shadow: 0 18px 38px rgba(121, 76, 222, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.55);
       position: relative;
     }
+
     .logo::after {
       content: "";
       position: absolute;
       inset: 8px;
-      border: 1px solid rgba(255,255,255,.36);
+      border: 1px solid rgba(255, 255, 255, 0.36);
       border-radius: 20px;
     }
+
     .hero h1 {
       font-size: clamp(2.25rem, 6vw, 4.35rem);
       line-height: 1.04;
@@ -119,12 +164,14 @@
       font-weight: 850;
       margin-bottom: 0.35rem;
     }
+
     .hero h1 span {
       background: linear-gradient(90deg, #7c3aed, #ec4899, #f97316);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
+
     .subtitle {
       max-width: 650px;
       margin: 16px auto 30px;
@@ -133,25 +180,29 @@
       line-height: 1.7;
     }
 
-    /* ----- download shell (card) ----- */
+    /* =========================================================
+       DOWNLOAD SHELL
+    ========================================================= */
     .download-shell {
       width: min(780px, 100%);
       margin: 0 auto;
       padding: 8px;
-      border: 1px solid rgba(118, 87, 255, .18);
+      border: 1px solid rgba(118, 87, 255, 0.18);
       border-radius: 22px;
-      background: rgba(255,255,255,0.78);
+      background: rgba(255, 255, 255, 0.78);
       box-shadow: var(--shadow);
       display: flex;
       gap: 8px;
       backdrop-filter: blur(14px);
-      transition: box-shadow .2s, border-color .2s, transform .2s;
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
     }
+
     .download-shell:focus-within {
-      border-color: rgba(118, 87, 255, .48);
-      box-shadow: 0 28px 80px rgba(100, 70, 205, .18);
+      border-color: rgba(118, 87, 255, 0.48);
+      box-shadow: 0 28px 80px rgba(100, 70, 205, 0.18);
       transform: translateY(-1px);
     }
+
     .download-shell input {
       min-width: 0;
       flex: 1;
@@ -163,10 +214,12 @@
       color: var(--ink);
       font-weight: 500;
     }
+
     .download-shell input::placeholder {
       color: #98a2b3;
       font-weight: 400;
     }
+
     .download-btn {
       min-width: 148px;
       border: 0;
@@ -176,36 +229,46 @@
       background: linear-gradient(135deg, var(--primary), #9d59db 55%, var(--accent));
       font-weight: 800;
       cursor: pointer;
-      transition: transform .2s, box-shadow .2s, filter .2s;
+      transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 9px;
       font-size: 0.95rem;
       height: 54px;
-      box-shadow: 0 12px 24px rgba(113, 72, 220, .25);
+      box-shadow: 0 12px 24px rgba(113, 72, 220, 0.25);
     }
+
     .download-btn:hover {
       filter: brightness(1.04);
       transform: translateY(-2px);
-      box-shadow: 0 16px 30px rgba(113, 72, 220, .3);
+      box-shadow: 0 16px 30px rgba(113, 72, 220, 0.3);
     }
-    .download-btn:active { transform: translateY(0); }
+
+    .download-btn:active {
+      transform: translateY(0);
+    }
+
     .download-btn:disabled {
       opacity: 0.6;
       cursor: not-allowed;
       transform: none;
     }
+
     .loader {
       width: 20px;
       height: 20px;
-      border: 2px solid rgba(255,255,255,0.3);
+      border: 2px solid rgba(255, 255, 255, 0.3);
       border-top-color: #fff;
       border-radius: 50%;
       animation: spin 0.7s linear infinite;
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .hidden { display: none !important; }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
 
     .trust-row {
       width: min(780px, 100%);
@@ -219,7 +282,7 @@
       font-weight: 650;
       letter-spacing: 0.01em;
     }
-    .trust-row span::first-letter { color: #36a87e; }
+
     .error {
       width: min(780px, 100%);
       margin: 12px auto 0;
@@ -227,23 +290,26 @@
       font-size: 13px;
       text-align: left;
       padding: 11px 14px;
-      border: 1px solid rgba(180, 35, 24, .16);
+      border: 1px solid rgba(180, 35, 24, 0.16);
       border-radius: 12px;
-      background: rgba(255, 245, 243, .88);
+      background: rgba(255, 245, 243, 0.88);
       font-weight: 600;
     }
 
-    /* ----- ad panels (soft) ----- */
+    /* =========================================================
+       ADS
+    ========================================================= */
     .ad-panel {
       width: min(780px, 100%);
       margin: 24px auto 0;
       padding: 13px 10px;
-      border: 1px dashed rgba(118, 87, 255, .18);
+      border: 1px dashed rgba(118, 87, 255, 0.18);
       border-radius: 18px;
-      background: rgba(255,255,255,0.5);
+      background: rgba(255, 255, 255, 0.5);
       backdrop-filter: blur(10px);
-      transition: .2s;
+      transition: 0.2s;
     }
+
     .ad-label {
       text-align: center;
       font-size: 10px;
@@ -252,6 +318,7 @@
       text-transform: uppercase;
       margin-bottom: 6px;
     }
+
     .ad-slot {
       display: flex;
       justify-content: center;
@@ -260,31 +327,42 @@
       width: 100%;
       min-height: 60px;
     }
-    .banner-ad { min-height: 60px; }
-    .banner-728 { min-height: 90px; }
 
-    /* ----- result card ----- */
+    .banner-ad {
+      min-height: 60px;
+    }
+
+    .banner-728 {
+      min-height: 90px;
+    }
+
+    /* =========================================================
+       RESULT CARD
+    ========================================================= */
     .result {
       width: min(780px, 100%);
       margin: 36px auto 0;
       background: var(--surface);
-      border: 1px solid rgba(118, 87, 255, .16);
+      border: 1px solid rgba(118, 87, 255, 0.16);
       border-radius: 26px;
       padding: 22px 22px 20px;
       box-shadow: var(--shadow);
       backdrop-filter: blur(14px);
-      transition: .25s;
+      transition: 0.25s;
     }
+
     .result-head {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 14px;
     }
+
     .result-head h2 {
       font-size: 1.2rem;
       font-weight: 700;
     }
+
     .ready {
       color: #157a58;
       font-size: 11px;
@@ -295,30 +373,36 @@
       padding: 6px 12px;
       border-radius: 40px;
     }
+
     .video-box {
       border-radius: 16px;
       overflow: hidden;
       background: #000;
       line-height: 0;
     }
+
     .video-box video {
       display: block;
       width: 100%;
       max-height: 680px;
       background: #0b0b0b;
     }
+
     .video-info {
       padding: 16px 2px 12px;
     }
+
     .video-info h3 {
       font-size: 1.05rem;
       font-weight: 650;
       margin-bottom: 2px;
     }
+
     .video-info p {
       color: #667085;
       font-size: 13px;
     }
+
     .save-btn {
       display: flex;
       align-items: center;
@@ -330,166 +414,338 @@
       color: #fff;
       background: linear-gradient(135deg, #1e1941, #3b2f78);
       font-weight: 800;
-      transition: .2s;
-      box-shadow: 0 12px 24px rgba(38, 27, 92, .18);
+      transition: 0.2s;
+      box-shadow: 0 12px 24px rgba(38, 27, 92, 0.18);
     }
+
     .save-btn:hover {
       background: linear-gradient(135deg, #2a2358, #5141a0);
       transform: translateY(-1px);
     }
 
-    /* ----- content grid (info + side ad) ----- */
-    .content-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 180px;
-      gap: 30px;
-      align-items: start;
-      margin-top: 52px;
+    /* =========================================================
+       SEO BLOG
+    ========================================================= */
+    .seo-blog {
+      width: min(780px, 100%);
+      margin: 42px auto 0;
     }
-    .info {
-      padding: 0 0 20px;
+
+    .blog-header {
+      text-align: center;
+      margin-bottom: 24px;
     }
-    .info h2 {
-      font-size: clamp(1.65rem, 3vw, 2rem);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      margin-bottom: 20px;
+
+    .blog-eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(118, 87, 255, 0.08);
+      border: 1px solid rgba(118, 87, 255, 0.14);
+      color: #7657ff;
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
     }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+
+    .blog-header h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.1;
+      letter-spacing: -0.045em;
+      font-weight: 850;
+      margin-bottom: 10px;
     }
-    .step {
+
+    .blog-header p {
+      max-width: 620px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .blog-content {
       background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 23px 19px;
-      backdrop-filter: blur(12px);
-      transition: .2s;
-      box-shadow: 0 10px 28px rgba(55, 43, 119, .04);
+      border: 1px solid rgba(118, 87, 255, 0.14);
+      border-radius: 26px;
+      padding: clamp(22px, 4vw, 38px);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
     }
-    .step:hover {
-      background: var(--surface-strong);
-      border-color: rgba(118, 87, 255, .27);
-      box-shadow: 0 16px 35px rgba(55, 43, 119, .1);
-      transform: translateY(-3px);
+
+    .blog-content h2 {
+      font-size: clamp(1.35rem, 3vw, 1.65rem);
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 800;
+      margin: 30px 0 12px;
     }
-    .step-number {
+
+    .blog-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .blog-content h3 {
+      font-size: 1rem;
+      font-weight: 750;
+      margin-bottom: 5px;
+    }
+
+    .blog-content p {
+      color: #667085;
+      font-size: 0.93rem;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .blog-content strong {
+      color: #343047;
+    }
+
+    .blog-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin: 24px 0;
+      padding: 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(118, 87, 255, 0.08), rgba(233, 86, 166, 0.06));
+      border: 1px solid rgba(118, 87, 255, 0.12);
+    }
+
+    .blog-highlight-icon {
       width: 42px;
       height: 42px;
-      border-radius: 14px;
+      flex: 0 0 42px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, #7c5cff, #b85bcf);
-      color: #fff;
-      font-weight: 850;
-      font-size: 1rem;
-      margin-bottom: 16px;
-      box-shadow: 0 9px 18px rgba(118, 87, 255, .2);
-    }
-    .step h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .step p {
-      color: #667085;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-    .side-ad {
-      min-height: 280px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding-top: 6px;
-    }
-    .side-ad > div {
-      width: 100%;
+      border-radius: 13px;
+      background: #fff;
+      box-shadow: 0 7px 18px rgba(70, 50, 150, 0.09);
+      font-size: 20px;
     }
 
-    /* ----- FAQ ----- */
-    .faq {
-      width: 100%;
-      max-width: 780px;
-      margin: 64px auto 0;
-      padding: 0 0 20px;
-      position: relative;
-      z-index: 1;
+    .blog-highlight p {
+      margin: 0;
     }
-    .faq-head {
-      text-align: center;
-      margin-bottom: 22px;
+
+    .blog-list {
+      padding-left: 22px;
+      margin: 10px 0 18px;
     }
-    .section-kicker {
-      display: block;
-      color: var(--primary-dark);
-      font-size: 11px;
-      font-weight: 850;
-      letter-spacing: 0.18em;
+
+    .blog-list li {
+      color: #667085;
+      font-size: 0.93rem;
+      line-height: 1.7;
       margin-bottom: 9px;
-      text-transform: uppercase;
+      padding-left: 3px;
     }
-    .faq-head h2 {
-      font-size: clamp(1.5rem, 4vw, 2.2rem);
-      letter-spacing: -0.02em;
-      margin-bottom: 6px;
+
+    .blog-list li::marker {
+      color: #7657ff;
+    }
+
+    .content-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 18px 0 20px;
+    }
+
+    .content-tags span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid rgba(118, 87, 255, 0.14);
+      color: #62558f;
+      font-size: 12px;
       font-weight: 700;
     }
-    .faq-head p {
-      color: #667085;
-      font-size: 14px;
-    }
-    .faq-grid {
+
+    .steps-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    .faq details {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 19px;
-      padding: 17px 19px;
-      backdrop-filter: blur(12px);
-      transition: border-color .2s, background .2s, box-shadow .2s;
-    }
-    .faq details[open] {
-      background: rgba(255,255,255,.96);
-      border-color: rgba(118, 87, 255, .24);
-      box-shadow: 0 13px 30px rgba(64, 46, 145, .08);
-    }
-    .faq summary {
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 14px;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-    }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after {
-      content: "+";
-      color: var(--primary);
-      font-size: 21px;
-      line-height: 1;
-      font-weight: 400;
-      transition: transform .2s;
-    }
-    .faq details[open] summary::after {
-      content: "−";
-      transform: rotate(180deg);
-    }
-    .faq details p {
-      color: #667085;
-      font-size: 13px;
-      line-height: 1.6;
-      padding-top: 12px;
+      gap: 13px;
+      margin: 18px 0 22px;
     }
 
-    /* ----- footer ----- */
+    .blog-step {
+      display: flex;
+      gap: 13px;
+      padding: 17px;
+      border-radius: 17px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .blog-step>span {
+      width: 32px;
+      height: 32px;
+      flex: 0 0 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #7657ff, #e956a6);
+      color: white;
+      font-size: 10px;
+      font-weight: 850;
+    }
+
+    .blog-step p {
+      margin: 0;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       FAQ
+    ========================================================= */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-top: 17px;
+    }
+
+    .faq-list details {
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.55);
+      overflow: hidden;
+    }
+
+    .faq-list summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 18px;
+      font-size: 0.92rem;
+      font-weight: 750;
+      color: #343047;
+      position: relative;
+      padding-right: 45px;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      content: "+";
+      position: absolute;
+      right: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 19px;
+      color: #7657ff;
+      font-weight: 500;
+    }
+
+    .faq-list details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-list details p {
+      padding: 0 18px 17px;
+      margin: 0;
+      font-size: 0.87rem;
+    }
+
+    /* =========================================================
+       WARNING
+    ========================================================= */
+    .blog-warning {
+      margin: 22px 0;
+      padding: 18px;
+      border-radius: 17px;
+      background: #fffaf0;
+      border: 1px solid #f5d7a8;
+    }
+
+    .blog-warning strong {
+      display: block;
+      color: #7a4b00;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+    }
+
+    .blog-warning p {
+      color: #8a640f;
+      margin: 0;
+      font-size: 0.87rem;
+    }
+
+    .blog-footer-note {
+      margin-top: 26px;
+      padding: 18px;
+      border-radius: 17px;
+      background: rgba(118, 87, 255, 0.05);
+      border: 1px solid rgba(118, 87, 255, 0.1);
+      text-align: center;
+    }
+
+    .blog-footer-note strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.92rem;
+    }
+
+    .blog-footer-note p {
+      margin: 0;
+      font-size: 0.84rem;
+    }
+
+    /* =========================================================
+       CONTENT GRID
+    ========================================================= */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 30px;
+      margin-top: 40px;
+      width: min(100%, 780px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .side-ads {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .side-ad-box {
+      border: 1px dashed rgba(118, 87, 255, 0.18);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
+      padding: 13px 10px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .side-ad-box .ad-label {
+      margin-bottom: 10px;
+    }
+
+    .side-ad-box .ad-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 250px;
+    }
+
+    .bottom-ads {
+      width: min(780px, 100%);
+      margin: 30px auto 0;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
     footer {
       text-align: center;
       color: #8e8aa3;
@@ -501,9 +757,140 @@
       position: relative;
       z-index: 1;
     }
-    footer p { margin-bottom: 6px; }
 
-    /* ----- ad status toast ----- */
+    footer p {
+      margin-bottom: 6px;
+    }
+
+    /* =========================================================
+       AD GATE MODAL
+    ========================================================= */
+    .ad-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      background: rgba(15, 23, 42, 0.58);
+      backdrop-filter: blur(7px);
+    }
+
+    .ad-gate-card {
+      width: min(620px, 100%);
+      max-height: min(760px, calc(100vh - 36px));
+      overflow: auto;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 28px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfaff 100%);
+      box-shadow: 0 35px 100px rgba(39, 24, 95, 0.28);
+      padding: 26px;
+    }
+
+    .ad-gate-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 8px;
+    }
+
+    .ad-gate-head h2 {
+      font-size: 1.3rem;
+      letter-spacing: -0.02em;
+    }
+
+    .ad-gate-close {
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 20px;
+      color: #6f6c86;
+      transition: 0.2s;
+    }
+
+    .ad-gate-close:hover {
+      background: #f5f2ff;
+      color: var(--primary-dark);
+    }
+
+    .ad-gate-copy {
+      color: #667085;
+      font-size: 13px;
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .gate-ad {
+      min-height: 110px;
+      border: 1px solid #eaecf0;
+      border-radius: 18px;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .gate-ad .ad-label {
+      margin: 0;
+    }
+
+    .gate-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .gate-continue {
+      flex: 1;
+      min-height: 50px;
+      border: 0;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 11px 22px rgba(118, 87, 255, 0.2);
+      transition: 0.2s;
+    }
+
+    .gate-continue:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    .gate-cancel {
+      min-height: 50px;
+      padding: 0 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      color: #4d4964;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .gate-cancel:hover {
+      background: #f7f5ff;
+      border-color: rgba(118, 87, 255, 0.25);
+    }
+
+    .gate-status {
+      margin-top: 10px;
+      text-align: center;
+      color: #98a2b3;
+      font-size: 11px;
+    }
+
+    /* =========================================================
+       AD TOAST
+    ========================================================= */
     .ad-toast {
       position: fixed;
       right: 20px;
@@ -515,12 +902,13 @@
       border-radius: 16px;
       background: #fffaf0;
       color: #7a4b00;
-      box-shadow: 0 18px 50px rgba(16,24,40,.16);
+      box-shadow: 0 18px 50px rgba(16, 24, 40, 0.16);
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      animation: toastIn .22s ease-out;
+      animation: toastIn 0.22s ease-out;
     }
+
     .ad-toast .toast-icon {
       width: 30px;
       height: 30px;
@@ -531,536 +919,894 @@
       background: #fff0cf;
       font-weight: 900;
     }
-    .ad-toast strong { display:block; font-size:13px; margin-bottom:3px; }
-    .ad-toast span { display:block; font-size:12px; line-height:1.45; color:#8a640f; }
+
+    .ad-toast strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .ad-toast span {
+      display: block;
+      font-size: 12px;
+      line-height: 1.45;
+      color: #8a640f;
+    }
+
     .toast-close {
-      margin-left:auto;
-      border:0;
-      background:transparent;
-      color:#8a640f;
-      cursor:pointer;
-      font-size:18px;
-      line-height:1;
-      padding:2px;
-    }
-    @keyframes toastIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
-
-    /* ----- ad gate modal ----- */
-    .ad-gate {
-      position: fixed;
-      inset: 0;
-      z-index: 10000;
-      display: grid;
-      place-items: center;
-      padding: 18px;
-      background: rgba(15,23,42,.58);
-      backdrop-filter: blur(7px);
-    }
-    .ad-gate.hidden { display:none !important; }
-    .ad-gate-card {
-      width:min(620px, 100%);
-      max-height:min(760px, calc(100vh - 36px));
-      overflow:auto;
-      border:1px solid rgba(255,255,255,.8);
-      border-radius:28px;
-      background:linear-gradient(180deg, #ffffff 0%, #fbfaff 100%);
-      box-shadow:0 35px 100px rgba(39, 24, 95, .28);
-      padding:26px;
-    }
-    .ad-gate-head { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:8px; }
-    .ad-gate-head h2 { font-size:1.3rem; letter-spacing:-.02em; }
-    .ad-gate-close {
-      width:38px; height:38px; border:1px solid var(--line); border-radius:12px;
-      background:#fff; cursor:pointer; font-size:20px; color:#6f6c86;
-      transition: .2s;
-    }
-    .ad-gate-close:hover { background:#f5f2ff; color:var(--primary-dark); }
-    .ad-gate-copy { color:#667085; font-size:13px; line-height:1.55; margin-bottom:16px; }
-    .gate-ad {
-      min-height:110px; border:1px solid #eaecf0; border-radius:18px; background:#f8fafc;
-      display:flex; align-items:center; justify-content:center; overflow:hidden; margin-bottom:16px;
-    }
-    .gate-ad .ad-label { margin:0; }
-    .gate-actions { display:flex; gap:10px; }
-    .gate-continue {
-      flex:1; min-height:50px; border:0; border-radius:14px;
-      background:linear-gradient(135deg, var(--primary), var(--accent)); color:#fff;
-      font-weight:800; cursor:pointer; font-size:14px;
-      box-shadow: 0 11px 22px rgba(118, 87, 255, .2);
-      transition: .2s;
-    }
-    .gate-continue:hover { filter:brightness(1.05); transform:translateY(-1px); }
-    .gate-cancel {
-      min-height:50px; padding:0 18px; border:1px solid var(--line); border-radius:14px;
-      background:#fff; color:#4d4964; font-weight:700; cursor:pointer;
-      transition: .2s;
-    }
-    .gate-cancel:hover { background:#f7f5ff; border-color:rgba(118,87,255,.25); }
-    .gate-status { margin-top:10px; text-align:center; color:#98a2b3; font-size:11px; }
-    @media (max-width: 520px) {
-      .ad-toast { right:16px; bottom:16px; }
-      .ad-gate-card { padding:18px; border-radius:22px; }
-      .gate-actions { flex-direction:column; }
-      .gate-cancel { width:100%; }
+      margin-left: auto;
+      border: 0;
+      background: transparent;
+      color: #8a640f;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+      padding: 2px;
     }
 
-    /* ----- responsive ----- */
+    @keyframes toastIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
     @media (max-width: 850px) {
-      .content-grid { grid-template-columns: 1fr; }
-      .side-ad { display: none; }
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .side-ads {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .side-ad-box {
+        min-height: 200px;
+      }
+
+      .side-ad-box .ad-content {
+        min-height: 180px;
+      }
     }
+
     @media (max-width: 640px) {
-      body { padding-left: .75rem; padding-right: .75rem; }
+      body {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+
       .download-shell {
         flex-direction: column;
         padding: 7px;
       }
+
       .download-shell input {
         width: 100%;
-        padding: 14px 14px;
+        padding: 14px;
       }
+
       .download-btn {
         width: 100%;
         min-height: 52px;
         height: auto;
         padding: 14px;
       }
-      .hero h1 { font-size: clamp(2.15rem, 12vw, 3.1rem); }
-      .subtitle { font-size: .94rem; margin-bottom: 25px; }
-      .trust-row { gap: 10px 16px; }
-      .steps {
+
+      .hero h1 {
+        font-size: clamp(2.15rem, 12vw, 3.1rem);
+      }
+
+      .subtitle {
+        font-size: 0.94rem;
+        margin-bottom: 25px;
+      }
+
+      .trust-row {
+        gap: 10px 16px;
+      }
+
+      .result {
+        padding: 16px;
+      }
+
+      .seo-blog {
+        margin-top: 30px;
+      }
+
+      .blog-content {
+        padding: 20px 17px;
+        border-radius: 21px;
+      }
+
+      .steps-grid {
         grid-template-columns: 1fr;
       }
-      .faq-grid {
+
+      .blog-content h2 {
+        margin-top: 26px;
+      }
+
+      .blog-content p,
+      .blog-list li {
+        font-size: 0.9rem;
+      }
+
+      .side-ads {
         grid-template-columns: 1fr;
       }
-      .result { padding: 16px; }
+
+      .side-ad-box {
+        min-height: 180px;
+      }
+
+      .side-ad-box .ad-content {
+        min-height: 150px;
+      }
     }
+
     @media (max-width: 480px) {
-      .adblock-card { padding: 24px 16px 20px; }
-      .adblock-card h2 { font-size: 1.2rem; }
+      .ad-gate-card {
+        padding: 18px;
+        border-radius: 22px;
+      }
+
+      .gate-actions {
+        flex-direction: column;
+      }
+
+      .gate-cancel {
+        width: 100%;
+      }
+
+      .blog-highlight {
+        flex-direction: column;
+      }
     }
   </style>
 
+  <!-- Schema.org -->
   <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"WebApplication",
-      "name":"Instagram Video Downloader",
-      "url":"https://apiinsta.anujkattel.com.np/",
-      "description":"Online Instagram video and Reel downloader for public Instagram URLs.",
-      "applicationCategory":"MultimediaApplication",
-      "operatingSystem":"Any",
-      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Instagram Video Downloader",
+    "url": "https://instagram.anujkattel.com.np/",
+    "description": "Download Instagram videos and Reels online for free. Fast, simple, and mobile-friendly Instagram video downloader.",
+    "applicationCategory": "Multimedia",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Anuj Kattel"
     }
+  }
+  </script>
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an Instagram video downloader?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An Instagram video downloader is an online tool that can help you save publicly accessible Instagram videos or Reels to your device using their URL."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I download an Instagram Reel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Copy the public Reel link from Instagram, paste it into the downloader, click Download, and save the resulting video when it is ready."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the downloader work on Android and iPhone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The website can be accessed through a modern mobile browser on Android and iPhone devices."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to install an application?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The downloader is browser-based, so you can use it directly from your web browser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an Instagram account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You do not need to provide your Instagram login credentials to use the downloader. The tool is intended for publicly accessible URLs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I download private Instagram videos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. This service is intended for publicly accessible Instagram content and does not provide a way to bypass private-account restrictions."
+        }
+      }
+    ]
+  }
   </script>
 </head>
+
 <body>
+  <div class="page">
 
-<div class="page">
-
-  <!-- Ad gate: shown after the main Download button is clicked. It never blocks downloads because of ad-blocking. -->
-  <div id="adGate" class="ad-gate hidden" role="dialog" aria-modal="true" aria-labelledby="adGateTitle">
-    <div class="ad-gate-card">
-      <div class="ad-gate-head">
-        <h2 id="adGateTitle">Support this free downloader</h2>
-        <button type="button" id="adGateClose" class="ad-gate-close" aria-label="Close">×</button>
-      </div>
-      <p class="ad-gate-copy">An advertisement is shown before your download options. If your browser blocks the ad, that is okay — you can still continue.</p>
-      <div class="gate-ad">
-        <div>
-          <div class="ad-label">Advertisement</div>
-          <script>
-            atOptions = {
-              'key' : '281a994327b8eb88a8ef6183e80bf0c5',
-              'format' : 'iframe',
-              'height' : 100,
-              'width' : 300,
-              'params' : {}
-            };
-          </script>
-          <script id="gateAdScript" src="https://missiondifferentyawn.com/281a994327b8eb88a8ef6183e80bf0c5/invoke.js"></script>
+    <!-- AD GATE -->
+    <div id="adGate" class="ad-gate hidden" role="dialog" aria-modal="true" aria-labelledby="adGateTitle">
+      <div class="ad-gate-card">
+        <div class="ad-gate-head">
+          <h2 id="adGateTitle">Support This Free Service</h2>
+          <button type="button" id="adGateClose" class="ad-gate-close" aria-label="Close">×</button>
         </div>
+        <p class="ad-gate-copy">Please support this free Instagram downloader by viewing a short ad. You'll be able to
+          download your video immediately after.</p>
+        <div class="gate-ad">
+          <div>
+            <div class="ad-label">Advertisement</div>
+            <script>
+              atOptions = {
+                'key': '281a994327b8eb88a8ef6183e80bf0c5',
+                'format': 'iframe',
+                'height': 100,
+                'width': 300,
+                'params': {}
+              };
+            </script>
+            <script id="gateAdScript"
+              src="https://missiondifferentyawn.com/281a994327b8eb88a8ef6183e80bf0c5/invoke.js"></script>
+          </div>
+        </div>
+        <div class="gate-actions">
+          <button type="button" id="gateContinue" class="gate-continue">Continue to Download</button>
+          <button type="button" id="gateCancel" class="gate-cancel">Cancel</button>
+        </div>
+        <div id="gateStatus" class="gate-status">Your download will start after you continue.</div>
       </div>
-      <div class="gate-actions">
-        <button type="button" id="gateContinue" class="gate-continue">Continue to download</button>
-        <button type="button" id="gateCancel" class="gate-cancel">Cancel</button>
-      </div>
-      <div id="gateStatus" class="gate-status">Your download will start after you continue.</div>
     </div>
-  </div>
-  <div id="adToast" class="ad-toast hidden" role="status" aria-live="polite">
-    <div class="toast-icon">!</div>
-    <div><strong>Ad blocker detected</strong><span>Ads may not load, but you can still download your video.</span></div>
-    <button type="button" class="toast-close" id="toastClose" aria-label="Close">×</button>
-  </div>
 
-  <main>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="badge"><span>✦</span> FAST &nbsp;•&nbsp; FREE &nbsp;•&nbsp; MOBILE FRIENDLY</div>
-      <div class="logo">IG</div>
-      <h1>Download Instagram<br><span>Videos & Reels</span></h1>
-      <p class="subtitle">A fast, clean and mobile-friendly Instagram video downloader. Paste a public Reel or video URL below and download your video in a few clicks.</p>
-
-      <div class="download-shell">
-        <input id="urlInput" type="url" placeholder="Paste Instagram video or reel URL…" autocomplete="off" inputmode="url">
-        <button id="downloadBtn" class="download-btn" type="button">
-          <span id="buttonText">Download</span>
-          <span id="loader" class="loader hidden"></span>
-        </button>
+    <!-- AD BLOCKER TOAST -->
+    <div id="adToast" class="ad-toast hidden" role="status" aria-live="polite">
+      <div class="toast-icon">!</div>
+      <div>
+        <strong>Ad Blocker Detected</strong>
+        <span>Ads help keep this service free. You can still download your video.</span>
       </div>
-      <p id="errorMessage" class="error hidden"></p>
+      <button type="button" class="toast-close" id="toastClose" aria-label="Close">×</button>
+    </div>
 
-      <div class="trust-row" aria-label="Downloader features">
-        <span>✓ No app required</span>
-        <span>✓ Mobile friendly</span>
-        <span>✓ Simple interface</span>
-      </div>
+    <!-- MAIN -->
+    <main>
 
-      <!-- ad panel below trust row -->
+      <!-- HERO -->
+      <section class="hero">
+        <div class="badge"><span>✦</span> FREE &nbsp;•&nbsp; FAST &nbsp;•&nbsp; NO APP REQUIRED</div>
+        <div class="logo" aria-label="Instagram Downloader">IG</div>
+        <h1>Download Instagram <br><span>Videos & Reels</span></h1>
+        <p class="subtitle">The fastest and most reliable Instagram video downloader. Paste any public Instagram Reel or
+          video URL below and save it to your device instantly.</p>
+
+        <!-- Download Input -->
+        <div class="download-shell">
+          <input id="urlInput" type="url" placeholder="Paste Instagram video or reel URL…" autocomplete="off"
+            inputmode="url">
+          <button id="downloadBtn" class="download-btn" type="button">
+            <span id="buttonText">Download</span>
+            <span id="loader" class="loader hidden"></span>
+          </button>
+        </div>
+
+        <!-- Error -->
+        <p id="errorMessage" class="error hidden"></p>
+
+        <!-- Trust -->
+        <div class="trust-row" aria-label="Downloader features">
+          <span>✓ No registration</span>
+          <span>✓ Mobile friendly</span>
+          <span>✓ High quality</span>
+          <span>✓ Free forever</span>
+        </div>
+      </section>
+
+      <!-- TOP AD (468x60) -->
       <div class="ad-panel">
         <div class="ad-label">Advertisement</div>
         <div class="ad-slot banner-ad">
           <script>
             atOptions = {
-              'key' : '6ddbb78bf5064f6ab92b570c70ae05fc',
-              'format' : 'iframe',
-              'height' : 60,
-              'width' : 468,
-              'params' : {}
+              'key': '6ddbb78bf5064f6ab92b570c70ae05fc',
+              'format': 'iframe',
+              'height': 60,
+              'width': 468,
+              'params': {}
             };
           </script>
           <script src="https://missiondifferentyawn.com/6ddbb78bf5064f6ab92b570c70ae05fc/invoke.js"></script>
         </div>
       </div>
-    </section>
 
-    <!-- RESULT CARD -->
-    <section id="resultCard" class="result hidden">
-      <div class="result-head">
-        <h2>Video Ready</h2>
-        <span class="ready">READY</span>
-      </div>
-      <div class="video-box">
-        <video id="videoPreview" controls playsinline></video>
-      </div>
-      <div class="video-info">
-        <h3 id="videoTitle">Instagram Video</h3>
-        <p id="videoUploader">Your video is ready.</p>
-      </div>
-      <a id="saveButton" class="save-btn" href="#">Download Video</a>
-    </section>
-
-    <!-- CONTENT GRID: info + side ad -->
-    <div class="content-grid">
-      <section class="info">
-        <h2>How it works</h2>
-        <div class="steps">
-          <article class="step">
-            <div class="step-number">1</div>
-            <h3>Copy URL</h3>
-            <p>Copy the URL of the Instagram Reel or video you want to download.</p>
-          </article>
-          <article class="step">
-            <div class="step-number">2</div>
-            <h3>Paste URL</h3>
-            <p>Paste the link into the downloader above and press Download.</p>
-          </article>
-          <article class="step">
-            <div class="step-number">3</div>
-            <h3>Save video</h3>
-            <p>Preview the returned video, then use the download button to save it.</p>
-          </article>
+      <!-- RESULT CARD -->
+      <section id="resultCard" class="result hidden">
+        <div class="result-head">
+          <h2>Your Video is Ready</h2>
+          <span class="ready">✓ READY</span>
         </div>
+        <div class="video-box">
+          <video id="videoPreview" controls playsinline preload="metadata"></video>
+        </div>
+        <div class="video-info">
+          <h3 id="videoTitle">Instagram Video</h3>
+          <p id="videoUploader">Video is ready for download.</p>
+        </div>
+        <a id="saveButton" class="save-btn" href="#" download>⬇ Download Video</a>
       </section>
 
-      <aside class="side-ad">
-        <div>
-          <div class="ad-label">Advertisement</div>
-          <script>
-            atOptions = {
-              'key' : '281a994327b8eb88a8ef6183e80bf0c5',
-              'format' : 'iframe',
-              'height' : 300,
-              'width' : 160,
-              'params' : {}
-            };
-          </script>
-          <script src="https://missiondifferentyawn.com/281a994327b8eb88a8ef6183e80bf0c5/invoke.js"></script>
+      <!-- SEO BLOG -->
+      <section class="seo-blog">
+        <div class="blog-header">
+          <span class="blog-eyebrow">INSTAGRAM DOWNLOADER GUIDE</span>
+          <h2>Online Instagram Downloader</h2>
+          <p>Download Instagram Reels and videos online quickly, easily, and for free. No app or registration required.
+          </p>
         </div>
-      </aside>
-    </div>
+        <article class="blog-content">
+          <h2>Download Instagram Videos & Reels Online</h2>
+          <p><strong>Instagram Video Downloader</strong> is a simple online tool that helps you download publicly
+            available Instagram videos and Reels directly to your device. You don't need to install an application or
+            browser extension.</p>
+          <p>Simply copy an Instagram video or Reel link, paste it into the downloader above, and start your download.
+            Our Instagram downloader is designed to work across modern devices and browsers, including Android phones,
+            iPhones, tablets, Windows PCs, Macs, and Linux computers.</p>
 
-    <!-- bottom ad panel -->
-    <div class="ad-panel">
-      <div class="ad-label">Advertisement</div>
-      <div class="ad-slot banner-728">
-        <script>
-          atOptions = {
-            'key' : 'e1c6887f4d314058fcfd928312cfe9fe',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-          };
-        </script>
-        <script src="https://missiondifferentyawn.com/e1c6887f4d314058fcfd928312cfe9fe/invoke.js"></script>
+          <div class="blog-highlight">
+            <div class="blog-highlight-icon">📥</div>
+            <div>
+              <h3>Simple Instagram Video Downloads</h3>
+              <p>Copy the public Instagram Reel or video URL, paste it above, and download the available video directly
+                to your device.</p>
+            </div>
+          </div>
+
+          <h2>What is an Instagram Video Downloader?</h2>
+          <p>An Instagram video downloader is an online service that allows users to save publicly available Instagram
+            videos and Reels for offline viewing.</p>
+          <p>Instead of recording your screen or installing additional software, you can use a web browser to process
+            the URL and download the available video.</p>
+          <p><strong>instagram.anujkattel.com.np</strong> focuses on keeping the downloading process simple. There is no
+            complicated setup: paste a valid Instagram URL into the input field and click the Download button.</p>
+
+          <h2>Why Use Our Instagram Downloader?</h2>
+          <p>There are many Instagram download tools available online, but they can sometimes be difficult to use,
+            overloaded with unnecessary steps, or require software installations.</p>
+          <p>Our goal is to provide a clean, lightweight, and mobile-friendly experience.</p>
+          <ul class="blog-list">
+            <li><strong>Easy to use:</strong> Paste an Instagram URL and start the download process.</li>
+            <li><strong>No registration:</strong> You don't need to create an account before using the downloader.</li>
+            <li><strong>Works in your browser:</strong> No additional desktop software or browser extension is required.
+            </li>
+            <li><strong>Mobile friendly:</strong> Use the downloader from Android, iPhone, tablet, or computer.</li>
+            <li><strong>Fast processing:</strong> The service is designed to make the downloading process quick and
+              straightforward.</li>
+            <li><strong>Free to use:</strong> You can use the basic Instagram video downloading functionality without a
+              paid subscription.</li>
+          </ul>
+
+          <h2>Supported Instagram Content</h2>
+          <p>Our downloader is primarily designed for publicly accessible Instagram video content.</p>
+          <p>Depending on what Instagram makes available through the supplied URL, supported content can include:</p>
+          <div class="content-tags">
+            <span>Instagram Reels</span>
+            <span>Instagram Videos</span>
+            <span>Public Posts</span>
+            <span>Video Posts</span>
+          </div>
+          <p>Private accounts and content that is not publicly accessible cannot be downloaded through this service. You
+            should only download content when you have the necessary permission or rights to do so.</p>
+
+          <h2>How to Download Instagram Reels and Videos?</h2>
+          <div class="steps-grid">
+            <div class="blog-step">
+              <span>01</span>
+              <div>
+                <h3>Copy the Instagram Link</h3>
+                <p>Open Instagram and navigate to the public Reel or video you want to save. Use Instagram's share
+                  options to copy its link.</p>
+              </div>
+            </div>
+            <div class="blog-step">
+              <span>02</span>
+              <div>
+                <h3>Paste the URL</h3>
+                <p>Return to this website and paste the Instagram URL into the downloader input field at the top of the
+                  page.</p>
+              </div>
+            </div>
+            <div class="blog-step">
+              <span>03</span>
+              <div>
+                <h3>Click Download</h3>
+                <p>Click the Download button and wait while the server processes the public Instagram video URL.</p>
+              </div>
+            </div>
+            <div class="blog-step">
+              <span>04</span>
+              <div>
+                <h3>Save Your Video</h3>
+                <p>When the video is ready, preview it and use the Download Video button to save it to your device.</p>
+              </div>
+            </div>
+          </div>
+
+          <h2>Can I Use the Instagram Downloader on Mobile?</h2>
+          <p>Yes. The website is designed to be responsive and can be used from modern mobile browsers.</p>
+          <p>You can use it on Android and iPhone devices without installing a separate application.</p>
+          <p>Simply open your browser, visit <strong>instagram.anujkattel.com.np</strong>, copy the Instagram video or
+            Reel URL, paste it into the downloader, and follow the download steps.</p>
+
+          <h2>Is This Instagram Downloader Free?</h2>
+          <p>Yes. The Instagram downloader is available to use online without requiring a paid membership or account
+            registration.</p>
+          <p>Advertising helps support the operation and maintenance of the free service.</p>
+
+          <h2>Is Instagram Video Downloader Safe?</h2>
+          <p>You do not need to provide your Instagram username or password to use this downloader.</p>
+          <p>Never enter your Instagram login credentials into a third-party downloader.</p>
+          <p>For your privacy and security, only use the downloader with public Instagram URLs and avoid submitting
+            sensitive information.</p>
+          <p>We also recommend downloading only content that you own or have permission to save.</p>
+
+          <div class="blog-warning">
+            <strong>⚠ Copyright & Privacy Notice</strong>
+            <p>Please respect the copyright, privacy, and intellectual property rights of Instagram users. Do not use
+              downloaded content to infringe another person's copyright, privacy, or other rights.</p>
+          </div>
+
+          <!-- FAQ -->
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details>
+              <summary>What is an Instagram video downloader?</summary>
+              <p>An Instagram video downloader is an online tool that can help you save publicly accessible Instagram
+                videos or Reels to your device using their URL.</p>
+            </details>
+            <details>
+              <summary>How do I download an Instagram Reel?</summary>
+              <p>Copy the public Reel link from Instagram, paste it into the downloader above, click Download, and save
+                the resulting video when it is ready.</p>
+            </details>
+            <details>
+              <summary>Does the downloader work on Android or iPhone?</summary>
+              <p>Yes. The website can be accessed through a modern mobile browser on Android and iPhone devices.</p>
+            </details>
+            <details>
+              <summary>Do I need to install an application?</summary>
+              <p>No. The downloader is browser-based, so you can use it directly from your web browser.</p>
+            </details>
+            <details>
+              <summary>Do I need an Instagram account?</summary>
+              <p>You do not need to provide your Instagram login credentials to use the downloader. The tool is intended
+                for publicly accessible URLs.</p>
+            </details>
+            <details>
+              <summary>Why isn't my Instagram video downloading?</summary>
+              <p>Make sure that you copied the complete Instagram URL and that the content is publicly accessible.
+                Instagram may also change how its content is delivered, which can temporarily affect third-party
+                downloading tools.</p>
+            </details>
+            <details>
+              <summary>Can I download private Instagram videos?</summary>
+              <p>No. This service is intended for publicly accessible Instagram content and does not provide a way to
+                bypass private-account restrictions.</p>
+            </details>
+            <details>
+              <summary>Is this Instagram downloader affiliated with Instagram?</summary>
+              <p>No. This website is an independent third-party service and is not affiliated with, endorsed by, or
+                sponsored by Instagram or Meta.</p>
+            </details>
+          </div>
+
+          <div class="blog-footer-note">
+            <strong>Use Instagram Downloader Responsibly</strong>
+            <p>This service is intended for downloading publicly available content that you have permission to save.
+              Please respect creators and applicable copyright laws.</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- CONTENT + SIDE ADS -->
+      <div class="content-grid">
+        <section class="main-content">
+          <h2
+            style="font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; letter-spacing: -0.04em; margin-bottom: 16px;">
+            Why Use Our Instagram Downloader?</h2>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px;">
+              <div style="font-size: 28px; margin-bottom: 10px;">⚡</div>
+              <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Lightning Fast</h3>
+              <p style="color: #667085; font-size: 0.9rem; line-height: 1.5;">Download Instagram videos in seconds with
+                our optimized streaming technology.</p>
+            </div>
+            <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px;">
+              <div style="font-size: 28px; margin-bottom: 10px;">📱</div>
+              <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Mobile Optimized</h3>
+              <p style="color: #667085; font-size: 0.9rem; line-height: 1.5;">Works perfectly on all devices - iPhone,
+                Android, tablet, and desktop.</p>
+            </div>
+            <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px;">
+              <div style="font-size: 28px; margin-bottom: 10px;">🎯</div>
+              <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 6px;">High Quality</h3>
+              <p style="color: #667085; font-size: 0.9rem; line-height: 1.5;">Get the available video quality with video
+                and audio streams intact.</p>
+            </div>
+            <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px;">
+              <div style="font-size: 28px; margin-bottom: 10px;">🆓</div>
+              <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Completely Free</h3>
+              <p style="color: #667085; font-size: 0.9rem; line-height: 1.5;">No hidden fees and no registration
+                required. Use the downloader directly from your browser.</p>
+            </div>
+          </div>
+          <div
+            style="margin-top: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px;">
+            <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 10px;">📌 How to Download Instagram Videos</h3>
+            <ol style="color: #667085; font-size: 0.9rem; line-height: 1.8; padding-left: 20px;">
+              <li><strong>Copy</strong> the URL of the Instagram Reel or video you want to download.</li>
+              <li><strong>Paste</strong> the URL into the input field above.</li>
+              <li><strong>Click</strong> the Download button.</li>
+              <li><strong>Save</strong> the video to your device.</li>
+            </ol>
+          </div>
+        </section>
+
+        <aside class="side-ads">
+          <!-- Side Ad 1 (160x300) -->
+          <div class="side-ad-box">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-content">
+              <script>
+                atOptions = {
+                  'key': '281a994327b8eb88a8ef6183e80bf0c5',
+                  'format': 'iframe',
+                  'height': 300,
+                  'width': 160,
+                  'params': {}
+                };
+              </script>
+              <script src="https://missiondifferentyawn.com/281a994327b8eb88a8ef6183e80bf0c5/invoke.js"></script>
+            </div>
+          </div>
+          <!-- Side Ad 2 (300x250) -->
+          <div class="side-ad-box">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-content">
+              <script>
+                atOptions = {
+                  'key': 'd17ae82179681e09d8bd366e96a5c92b',
+                  'format': 'iframe',
+                  'height': 250,
+                  'width': 300,
+                  'params': {}
+                };
+              </script>
+              <script src="https://missiondifferentyawn.com/d17ae82179681e09d8bd366e96a5c92b/invoke.js"></script>
+            </div>
+          </div>
+        </aside>
       </div>
-    </div>
 
-  </main>
-</div> <!-- /.page -->
+      <!-- BOTTOM AD (728x90) -->
+      <div class="bottom-ads">
+        <div class="ad-panel">
+          <div class="ad-label">Advertisement</div>
+          <div class="ad-slot banner-728">
+            <script>
+              atOptions = {
+                'key': 'e1c6887f4d314058fcfd928312cfe9fe',
+                'format': 'iframe',
+                'height': 90,
+                'width': 728,
+                'params': {}
+              };
+            </script>
+            <script src="https://missiondifferentyawn.com/e1c6887f4d314058fcfd928312cfe9fe/invoke.js"></script>
+          </div>
+        </div>
+      </div>
 
-<!-- FAQ -->
-<section class="faq">
-  <div class="faq-head">
-    <span class="section-kicker">FAQ</span>
-    <h2>Instagram Video Downloader FAQ</h2>
-    <p>Quick answers about downloading Instagram videos and Reels.</p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p><strong>Instagram Video Downloader</strong> — Download Instagram Reels & Videos for Free</p>
+      <p>Use this tool only for content you have permission to download.</p>
+      <p style="margin-top: 8px; font-size: 11px;">
+        <a href="#" style="color: #6f6c86;">Privacy Policy</a> &bull;
+        <a href="#" style="color: #6f6c86;">Terms of Service</a> &bull;
+        <a href="#" style="color: #6f6c86;">Contact</a>
+      </p>
+      <p style="margin-top: 10px; font-size: 11px;">We are not affiliated with Instagram or Meta.</p>
+      <p style="margin-top: 6px; font-size: 11px;">© 2026 Instagram Video Downloader. All rights reserved.</p>
+    </footer>
+
   </div>
-  <div class="faq-grid">
-    <details>
-      <summary>What is an Instagram video downloader?</summary>
-      <p>It is an online tool that lets you submit an eligible public Instagram video or Reel URL and receive a downloadable video.</p>
-    </details>
-    <details>
-      <summary>Can I use this on my phone?</summary>
-      <p>Yes. The interface is responsive and works on modern Android, iPhone, tablet and desktop browsers.</p>
-    </details>
-    <details>
-      <summary>Do I need to install an app?</summary>
-      <p>No. The downloader works directly in your web browser.</p>
-    </details>
-    <details>
-      <summary>Which Instagram links are supported?</summary>
-      <p>Use a valid Instagram URL for a public Reel or video. Private or restricted content may not be available.</p>
-    </details>
-  </div>
-</section>
 
-<script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"What is an Instagram video downloader?","acceptedAnswer":{"@type":"Answer","text":"It is an online tool that lets you submit an eligible public Instagram video or Reel URL and receive a downloadable video."}},
-      {"@type":"Question","name":"Can I use this on my phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. The interface is responsive and works on modern Android, iPhone, tablet and desktop browsers."}},
-      {"@type":"Question","name":"Do I need to install an app?","acceptedAnswer":{"@type":"Answer","text":"No. The downloader works directly in your web browser."}},
-      {"@type":"Question","name":"Which Instagram links are supported?","acceptedAnswer":{"@type":"Answer","text":"Use a valid Instagram URL for a public Reel or video. Private or restricted content may not be available."}}
-    ]
-  }
-</script>
+  <!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+  <script>
+    /* =========================================================
+       API
+    ========================================================= */
+    const API_URL = "https://apiinsta.anujkattel.com.np";
 
-<footer>
-  <p>Use this tool only for content you have permission to download.</p>
-  <p>Ads are displayed through third-party advertising providers.</p>
-</footer>
+    /* =========================================================
+       ELEMENTS
+    ========================================================= */
+    const urlInput = document.getElementById("urlInput");
+    const downloadBtn = document.getElementById("downloadBtn");
+    const buttonText = document.getElementById("buttonText");
+    const loader = document.getElementById("loader");
+    const errorMessage = document.getElementById("errorMessage");
+    const resultCard = document.getElementById("resultCard");
+    const videoPreview = document.getElementById("videoPreview");
+    const videoTitle = document.getElementById("videoTitle");
+    const videoUploader = document.getElementById("videoUploader");
+    const saveButton = document.getElementById("saveButton");
 
-<!-- ======================== SCRIPT ======================== -->
-<script>
-  const API_URL = "https://apiinsta.anujkattel.com.np";
+    /* Ad Gate */
+    const adGate = document.getElementById("adGate");
+    const adGateClose = document.getElementById("adGateClose");
+    const gateContinue = document.getElementById("gateContinue");
+    const gateCancel = document.getElementById("gateCancel");
+    const gateStatus = document.getElementById("gateStatus");
 
-  const urlInput = document.getElementById("urlInput");
-  const downloadBtn = document.getElementById("downloadBtn");
-  const buttonText = document.getElementById("buttonText");
-  const loader = document.getElementById("loader");
-  const errorMessage = document.getElementById("errorMessage");
-  const resultCard = document.getElementById("resultCard");
-  const videoPreview = document.getElementById("videoPreview");
-  const videoTitle = document.getElementById("videoTitle");
-  const videoUploader = document.getElementById("videoUploader");
-  const saveButton = document.getElementById("saveButton");
+    /* Ad Toast */
+    const adToast = document.getElementById("adToast");
+    const toastClose = document.getElementById("toastClose");
 
-  const adGate = document.getElementById("adGate");
-  const adGateClose = document.getElementById("adGateClose");
-  const gateContinue = document.getElementById("gateContinue");
-  const gateCancel = document.getElementById("gateCancel");
-  const gateStatus = document.getElementById("gateStatus");
-  const adToast = document.getElementById("adToast");
-  const toastClose = document.getElementById("toastClose");
+    /* =========================================================
+       STATE
+    ========================================================= */
+    let currentVideoUrl = null;
+    let pendingUrl = null;
+    let downloadInProgress = false;
+    let toastTimer = null;
 
-  let currentVideoUrl = null;
-  let pendingUrl = null;
-  let downloadInProgress = false;
-  let toastTimer = null;
-
-  function showError(msg) {
-    errorMessage.textContent = msg;
-    errorMessage.classList.remove("hidden");
-  }
-  function clearError() {
-    errorMessage.textContent = "";
-    errorMessage.classList.add("hidden");
-  }
-  function hideResult() { resultCard.classList.add("hidden"); }
-  function setLoading(loading) {
-    downloadBtn.disabled = loading;
-    if (loading) {
-      buttonText.classList.add("hidden");
-      loader.classList.remove("hidden");
-    } else {
-      buttonText.classList.remove("hidden");
-      loader.classList.add("hidden");
+    /* =========================================================
+       ERROR
+    ========================================================= */
+    function showError(msg) {
+      errorMessage.textContent = msg;
+      errorMessage.classList.remove("hidden");
     }
-  }
-  function isInstagramUrl(value) {
-    try {
-      const parsed = new URL(value);
-      const host = parsed.hostname.toLowerCase().replace(/^www\./, "");
-      return (host === "instagram.com" || host === "instagram.co") &&
-        (/^\/(reel|reels|p|tv)\//i.test(parsed.pathname));
-    } catch { return false; }
-  }
-
-  function showAdToast() {
-    adToast.classList.remove("hidden");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => adToast.classList.add("hidden"), 6000);
-  }
-  function closeAdGate() {
-    adGate.classList.add("hidden");
-    pendingUrl = null;
-  }
-  function openAdGate(url) {
-    pendingUrl = url;
-    gateStatus.textContent = "Your download will start after you continue.";
-    gateContinue.disabled = false;
-    gateContinue.textContent = "Continue to download";
-    adGate.classList.remove("hidden");
-  }
-
-  // Main button: validate URL, show the ad gate, then reveal/download the options.
-  function requestDownload() {
-    if (downloadInProgress) return;
-    const url = urlInput.value.trim();
-    clearError();
-    if (!url) { showError("Please paste an Instagram URL."); return; }
-    if (!isInstagramUrl(url)) { showError("Please enter a valid Instagram Reel or video URL."); return; }
-    openAdGate(url);
-  }
-
-  async function downloadVideo(url) {
-    if (downloadInProgress) return;
-    downloadInProgress = true;
-    setLoading(true);
-    hideResult();
-    if (currentVideoUrl) {
-      URL.revokeObjectURL(currentVideoUrl);
-      currentVideoUrl = null;
+    function clearError() {
+      errorMessage.textContent = "";
+      errorMessage.classList.add("hidden");
     }
 
-    try {
-      const response = await fetch(`${API_URL}/api/download/video`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url })
-      });
+    /* =========================================================
+       RESULT
+    ========================================================= */
+    function hideResult() {
+      resultCard.classList.add("hidden");
+    }
 
-      if (!response.ok) {
-        let msg = `Download failed (${response.status})`;
-        try {
-          const data = await response.json();
-          if (data.error) msg = data.error;
-          if (data.message) msg = data.message;
-        } catch {}
-        throw new Error(msg);
+    /* =========================================================
+       LOADING
+    ========================================================= */
+    function setLoading(loading) {
+      downloadBtn.disabled = loading;
+      if (loading) {
+        buttonText.classList.add("hidden");
+        loader.classList.remove("hidden");
+      } else {
+        buttonText.classList.remove("hidden");
+        loader.classList.add("hidden");
+      }
+    }
+
+    /* =========================================================
+       INSTAGRAM URL VALIDATION
+    ========================================================= */
+    function isInstagramUrl(value) {
+      try {
+        const parsed = new URL(value);
+        const host = parsed.hostname.toLowerCase().replace(/^www\./, "");
+        return (
+          (host === "instagram.com" || host === "instagram.co") &&
+          (/^\/(reel|reels|p|tv)\//i.test(parsed.pathname))
+        );
+      } catch {
+        return false;
+      }
+    }
+
+    /* =========================================================
+       AD TOAST
+    ========================================================= */
+    function showAdToast() {
+      adToast.classList.remove("hidden");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => { adToast.classList.add("hidden"); }, 6000);
+    }
+
+    /* =========================================================
+       AD GATE
+    ========================================================= */
+    function closeAdGate() {
+      adGate.classList.add("hidden");
+      pendingUrl = null;
+    }
+    function openAdGate(url) {
+      pendingUrl = url;
+      gateStatus.textContent = "Your download will start after you continue.";
+      gateContinue.disabled = false;
+      gateContinue.textContent = "Continue to Download";
+      adGate.classList.remove("hidden");
+    }
+
+    /* =========================================================
+       REQUEST DOWNLOAD
+    ========================================================= */
+    function requestDownload() {
+      if (downloadInProgress) return;
+      const url = urlInput.value.trim();
+      clearError();
+      if (!url) {
+        showError("Please paste an Instagram URL.");
+        return;
+      }
+      if (!isInstagramUrl(url)) {
+        showError("Please enter a valid Instagram Reel or video URL.");
+        return;
+      }
+      openAdGate(url);
+    }
+
+    /* =========================================================
+       DOWNLOAD VIDEO
+    ========================================================= */
+    async function downloadVideo(url) {
+      if (downloadInProgress) return;
+      downloadInProgress = true;
+      setLoading(true);
+      hideResult();
+      if (currentVideoUrl) {
+        URL.revokeObjectURL(currentVideoUrl);
+        currentVideoUrl = null;
       }
 
-      const blob = await response.blob();
-      if (!blob || blob.size === 0) throw new Error("The server returned an empty video.");
+      try {
+        const response = await fetch(`${API_URL}/api/instagram/download/video`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url })
+        });
 
-      currentVideoUrl = URL.createObjectURL(blob);
-      videoPreview.src = currentVideoUrl;
-      videoPreview.load();
-      videoTitle.textContent = "Instagram Video";
-      videoUploader.textContent = `${(blob.size / 1024 / 1024).toFixed(2)} MB • Video + audio ready`;
-      saveButton.href = currentVideoUrl;
-      saveButton.download = `instagram-video-downloaded-from-anujkatteldotcomnp-${Date.now()}.mp4`;
-      resultCard.classList.remove("hidden");
-      resultCard.scrollIntoView({ behavior: "smooth", block: "center" });
-      gateStatus.textContent = "Download options are ready.";
-    } catch (err) {
-      console.error("Download error:", err);
-      showError(err.message || "Something went wrong while downloading.");
-    } finally {
-      setLoading(false);
-      downloadInProgress = false;
+        if (!response.ok) {
+          let msg = `Download failed (${response.status})`;
+          try {
+            const data = await response.json();
+            if (data.error) msg = data.error;
+            if (data.message) msg = data.message;
+          } catch { }
+          throw new Error(msg);
+        }
+
+        const blob = await response.blob();
+        if (!blob || blob.size === 0) {
+          throw new Error("The server returned an empty video.");
+        }
+
+        currentVideoUrl = URL.createObjectURL(blob);
+        videoPreview.src = currentVideoUrl;
+        videoPreview.load();
+        videoTitle.textContent = "Instagram Video Download";
+        videoUploader.textContent = `${(blob.size / 1024 / 1024).toFixed(2)} MB • Video + Audio Ready`;
+        saveButton.href = currentVideoUrl;
+        saveButton.download = `instagram-video-${Date.now()}.mp4`;
+        resultCard.classList.remove("hidden");
+        resultCard.scrollIntoView({ behavior: "smooth", block: "center" });
+        gateStatus.textContent = "✓ Download options are ready!";
+
+      } catch (err) {
+        console.error("Download error:", err);
+        showError(err.message || "Something went wrong while downloading. Please try again.");
+      } finally {
+        setLoading(false);
+        downloadInProgress = false;
+      }
     }
-  }
 
-  gateContinue.addEventListener("click", async () => {
-    const url = pendingUrl;
-    if (!url || downloadInProgress) return;
-    adGate.classList.add("hidden");
-    pendingUrl = null;
-    await downloadVideo(url);
-  });
-  gateCancel.addEventListener("click", closeAdGate);
-  adGateClose.addEventListener("click", closeAdGate);
-  adToast.addEventListener("click", (e) => { if (e.target === adToast) adToast.classList.add("hidden"); });
-  toastClose.addEventListener("click", () => adToast.classList.add("hidden"));
+    /* =========================================================
+       EVENT LISTENERS
+    ========================================================= */
+    gateContinue.addEventListener("click", async () => {
+      const url = pendingUrl;
+      if (!url || downloadInProgress) return;
+      adGate.classList.add("hidden");
+      pendingUrl = null;
+      await downloadVideo(url);
+    });
 
-  downloadBtn.addEventListener("click", requestDownload);
-  urlInput.addEventListener("keydown", (e) => { if (e.key === "Enter") requestDownload(); });
-  window.addEventListener("beforeunload", () => { if (currentVideoUrl) URL.revokeObjectURL(currentVideoUrl); });
+    gateCancel.addEventListener("click", closeAdGate);
+    adGateClose.addEventListener("click", closeAdGate);
 
-  // ----- responsive ad helper (mobile banner) -----
-  (function() {
-    const hero = document.querySelector('.hero');
-    const mobileAd = document.createElement('div');
-    mobileAd.className = 'ad-panel';
-    mobileAd.innerHTML = `
-      <div class="ad-label">Advertisement</div>
-      <div class="ad-slot banner-ad" id="responsiveBanner"></div>
-    `;
-    hero.appendChild(mobileAd);
+    toastClose.addEventListener("click", () => {
+      adToast.classList.add("hidden");
+    });
 
-    const slot = document.getElementById('responsiveBanner');
-    function renderResponsiveBanner() {
-      slot.innerHTML = '';
-      const mobile = window.innerWidth <= 520;
-      const key = mobile ? '6b6efee01e32941daf411ef490d5ab0c' : '6ddbb78bf5064f6ab92b570c70ae05fc';
-      const w = mobile ? 320 : 468;
-      const h = mobile ? 50 : 60;
-      const config = document.createElement('script');
-      config.text = `atOptions = { 'key':'${key}','format':'iframe','height':${h},'width':${w},'params':{} };`;
-      const invoke = document.createElement('script');
-      invoke.src = `https://missiondifferentyawn.com/${key}/invoke.js`;
-      slot.appendChild(config);
-      slot.appendChild(invoke);
+    downloadBtn.addEventListener("click", requestDownload);
+
+    urlInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") requestDownload();
+    });
+
+    window.addEventListener("beforeunload", () => {
+      if (currentVideoUrl) URL.revokeObjectURL(currentVideoUrl);
+    });
+
+    /* =========================================================
+       AD BLOCK DETECTION
+    ========================================================= */
+    (function () {
+      const adScripts = Array.from(document.querySelectorAll('script[src*="missiondifferentyawn.com"]'));
+      let detected = false;
+      const reportBlocked = () => {
+        if (detected) return;
+        detected = true;
+        showAdToast();
+      };
+      adScripts.forEach((script) => {
+        script.addEventListener("error", reportBlocked, { once: true });
+      });
+      const bait = document.createElement("div");
+      bait.className = "ad ad-banner adsbox ad-placeholder";
+      bait.setAttribute("aria-hidden", "true");
+      bait.style.cssText = `position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important;pointer-events:none!important;`;
+      document.body.appendChild(bait);
+      setTimeout(() => {
+        const style = window.getComputedStyle(bait);
+        const hidden = style.display === "none" || style.visibility === "hidden" || bait.offsetHeight === 0;
+        if (hidden) reportBlocked();
+        bait.remove();
+      }, 1400);
+    })();
+
+    self.options = {
+      "domain": "5gvci.com",
+      "zoneId": 11693734
     }
-    renderResponsiveBanner();
-    window.addEventListener('resize', renderResponsiveBanner);
-  })();
+    self.lary = ""
+    importScripts('https://5gvci.com/act/files/service-worker.min.js?r=sw')
 
-  // ----- soft ad-block detection: toast only, never disables downloading -----
-  (function() {
-    const adScripts = Array.from(document.querySelectorAll('script[src*="missiondifferentyawn.com"]'));
-    let detected = false;
-    const reportBlocked = () => {
-      if (detected) return;
-      detected = true;
-      showAdToast();
-    };
-
-    adScripts.forEach(script => script.addEventListener('error', reportBlocked, { once: true }));
-
-    const bait = document.createElement('div');
-    bait.className = 'ad ad-banner adsbox ad-placeholder';
-    bait.setAttribute('aria-hidden', 'true');
-    bait.style.cssText = 'position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important;pointer-events:none!important;';
-    document.body.appendChild(bait);
-
-    setTimeout(() => {
-      const style = window.getComputedStyle(bait);
-      const hidden = style.display === 'none' || style.visibility === 'hidden' || bait.offsetHeight === 0;
-      if (hidden) reportBlocked();
-      bait.remove();
-    }, 1400);
-  })();
-</script>
-
+  </script>
 </body>
+
 </html>
