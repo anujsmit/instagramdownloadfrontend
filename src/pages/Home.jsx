@@ -11,7 +11,7 @@ function Home() {
     const [videoSize, setVideoSize] = useState("");
     const [showResult, setShowResult] = useState(false);
 
-    const API_URL = "http://127.0.0.1:5050";
+    const API_URL = "https://apiinsta.anujkattel.com.np/";
 
     useEffect(() => {
         document.title =
