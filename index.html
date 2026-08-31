@@ -1,1030 +1,231 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
-  <title>Download Instagram Reels & Videos Online Free | Instagram Downloader</title>
-  <meta name="description" content="Download Instagram videos and Reels online for free. Fast, simple, and mobile-friendly Instagram video downloader. Paste any public Instagram Reel or video URL and save instantly.">
-  <meta name="keywords" content="Instagram video downloader, Instagram Reel downloader, download Instagram videos, Reel downloader, Instagram downloader, save Instagram videos, Instagram video saver">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="author" content="Anuj Kattel">
-  <link rel="canonical" href="https://instagram.anujkattel.com.np/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Instagram Video Downloader — Download Reels & Videos Free">
-  <meta property="og:description" content="Download Instagram videos and Reels online for free. Fast, simple, and mobile-friendly Instagram video downloader.">
-  <meta property="og:url" content="https://instagram.anujkattel.com.np/">
-  <meta property="og:image" content="https://instagram.anujkattel.com.np/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Instagram Video Downloader">
-  <meta name="twitter:description" content="Download Instagram videos and Reels online for free.">
-  <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
 
-  <style>
-    /* ----- RESET & BASE (white background) ----- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      min-height: 100vh;
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #ffffff;
-      color: #15132b;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem 1rem 2.5rem;
-      line-height: 1.5;
-    }
-    /* remove all background layers, keep white */
-    #vanta-bg, body::before {
-      display: none !important;
-    }
+    <!-- =====================================================
+         BASIC SEO
+         ===================================================== -->
 
-    a { color: inherit; text-decoration: none; }
-    button, input { font: inherit; }
-    button:focus-visible, input:focus-visible, a:focus-visible {
-      outline: 2px solid #7657ff;
-      outline-offset: 2px;
-    }
-    .hidden { display: none !important; }
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-    .page {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    <title>
+      Instagram Video & Reels Downloader – Download Instagram Videos Online
+    </title>
 
-    /* ----- HERO ----- */
-    .hero {
-      text-align: center;
-      padding: 1.8rem 0 1.2rem;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border: 1px solid #e0ddf5;
-      background: #f9f8ff;
-      border-radius: 999px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      color: #5a4d8a;
-      margin-bottom: 1.2rem;
-      backdrop-filter: blur(2px);
-    }
-    .badge span { color: #e956a6; font-size: 1rem; }
+    <meta
+      name="description"
+      content="Download Instagram videos and Reels online quickly and easily. Paste a public Instagram video or Reel URL and download it in high quality for free."
+    />
 
-    .logo {
-      width: 72px;
-      height: 72px;
-      margin: 0 auto 1.2rem;
-      border-radius: 24px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(145deg, #7c5cff, #d953ad, #ff9e5b);
-      color: #fff;
-      font-size: 1.8rem;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      box-shadow: 0 12px 28px rgba(121, 76, 222, 0.20);
-      position: relative;
-    }
-    .logo::after {
-      content: "";
-      position: absolute;
-      inset: 6px;
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 18px;
-    }
+    <meta
+      name="keywords"
+      content="Instagram downloader, Instagram video downloader, Instagram Reels downloader, download Instagram videos, download Instagram Reels, Instagram video download, Reels downloader, Instagram downloader online"
+    />
 
-    .hero h1 {
-      font-size: clamp(2rem, 7vw, 3.8rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      font-weight: 850;
-      margin-bottom: 0.3rem;
-    }
-    .hero h1 span {
-      background: linear-gradient(90deg, #7c3aed, #ec4899, #f97316);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .subtitle {
-      max-width: 600px;
-      margin: 0.8rem auto 1.8rem;
-      color: #5f5b78;
-      font-size: 1rem;
-      line-height: 1.6;
-      padding: 0 0.5rem;
-    }
+    <meta
+      name="author"
+      content="Anuj Kattel"
+    />
 
-    /* ----- DOWNLOAD SHELL (white card) ----- */
-    .download-shell {
-      width: min(100%, 820px);
-      margin: 0 auto;
-      padding: 6px;
-      border: 1px solid #e6e3f5;
-      border-radius: 20px;
-      background: #ffffff;
-      box-shadow: 0 12px 40px rgba(35, 28, 74, 0.08);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      transition: box-shadow 0.2s, border-color 0.2s;
-    }
-    .download-shell:focus-within {
-      border-color: #7657ff;
-      box-shadow: 0 16px 48px rgba(118, 87, 255, 0.12);
-    }
-    .download-shell input {
-      flex: 1 1 180px;
-      min-width: 160px;
-      border: 0;
-      outline: 0;
-      background: transparent;
-      padding: 0.9rem 1.2rem;
-      font-size: 0.95rem;
-      color: #15132b;
-      font-weight: 500;
-    }
-    .download-shell input::placeholder {
-      color: #a8a3bf;
-      font-weight: 400;
-    }
-    .download-btn {
-      flex: 0 0 auto;
-      border: 0;
-      border-radius: 16px;
-      padding: 0 1.8rem;
-      color: #fff;
-      background: linear-gradient(135deg, #7657ff, #9d59db 55%, #e956a6);
-      font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      height: 52px;
-      box-shadow: 0 8px 22px rgba(113, 72, 220, 0.25);
-      transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
-      white-space: nowrap;
-      min-width: 120px;
-    }
-    .download-btn:hover {
-      filter: brightness(1.04);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(113, 72, 220, 0.30);
-    }
-    .download-btn:active { transform: translateY(0); }
-    .download-btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
-    }
-    .loader {
-      width: 20px;
-      height: 20px;
-      border: 2px solid rgba(255,255,255,0.3);
-      border-top-color: #fff;
-      border-radius: 50%;
-      animation: spin 0.7s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
 
-    .trust-row {
-      width: min(100%, 820px);
-      margin: 1.2rem auto 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.2rem 2rem;
-      color: #6f6a88;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
-    .error {
-      width: min(100%, 820px);
-      margin: 0.8rem auto 0;
-      color: #b42318;
-      font-size: 0.85rem;
-      padding: 0.7rem 1rem;
-      border: 1px solid rgba(180, 35, 24, 0.15);
-      border-radius: 14px;
-      background: #fff5f3;
-      font-weight: 600;
-    }
+    <meta
+      name="googlebot"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
 
-    /* ----- TWO COLUMN (responsive) ----- */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      margin-top: 2rem;
-      width: 100%;
-      max-width: 820px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    <meta
+      name="theme-color"
+      content="#7657ff"
+    />
 
-    /* ----- RESULT CARD (white) ----- */
-    .result {
-      width: 100%;
-      background: #ffffff;
-      border: 1px solid #eceafe;
-      border-radius: 24px;
-      padding: 1.5rem;
-      box-shadow: 0 12px 36px rgba(35, 28, 74, 0.06);
-    }
-    .result-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .result-head h2 {
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-    .ready {
-      color: #157a58;
-      font-size: 0.7rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      background: #e9fbf3;
-      border: 1px solid #c8f0df;
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
-    }
-    .video-box {
-      border-radius: 16px;
-      overflow: hidden;
-      background: #0b0b0b;
-      line-height: 0;
-    }
-    .video-box video {
-      display: block;
-      width: 100%;
-      max-height: 580px;
-      background: #0b0b0b;
-    }
-    .video-info {
-      padding: 1rem 0 0.8rem;
-    }
-    .video-info h3 {
-      font-size: 1rem;
-      font-weight: 650;
-      margin-bottom: 2px;
-    }
-    .video-info p {
-      color: #6f6a88;
-      font-size: 0.85rem;
-    }
-    .save-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 0.9rem;
-      border-radius: 14px;
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, #1e1941, #3b2f78);
-      font-weight: 700;
-      transition: 0.2s;
-      box-shadow: 0 8px 20px rgba(38, 27, 92, 0.12);
-      border: none;
-      cursor: pointer;
-      font-size: 0.95rem;
-    }
-    .save-btn:hover {
-      background: linear-gradient(135deg, #2a2358, #5141a0);
-      transform: translateY(-1px);
-    }
+    <meta
+      name="application-name"
+      content="Instagram Downloader"
+    />
 
-    /* ----- SEO BLOG (white) ----- */
-    .seo-blog { width: 100%; }
-    .blog-header {
-      text-align: center;
-      margin-bottom: 1.8rem;
-    }
-    .blog-eyebrow {
-      display: inline-block;
-      padding: 0.3rem 1rem;
-      border-radius: 999px;
-      background: #f2efff;
-      border: 1px solid #dfdaf5;
-      color: #7657ff;
-      font-size: 0.6rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.8rem;
-    }
-    .blog-header h2 {
-      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      font-weight: 800;
-      margin-bottom: 0.4rem;
-    }
-    .blog-header p {
-      max-width: 560px;
-      margin: 0 auto;
-      color: #5f5b78;
-      font-size: 0.95rem;
-    }
-    .blog-content {
-      background: #ffffff;
-      border: 1px solid #eceafe;
-      border-radius: 24px;
-      padding: 1.8rem 1.8rem 2rem;
-      box-shadow: 0 8px 28px rgba(35, 28, 74, 0.04);
-    }
-    .blog-content h2 {
-      font-size: clamp(1.25rem, 2.8vw, 1.6rem);
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-      font-weight: 800;
-      margin: 2rem 0 0.7rem;
-    }
-    .blog-content h2:first-child { margin-top: 0; }
-    .blog-content h3 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .blog-content p {
-      color: #4d4a63;
-      font-size: 0.93rem;
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-    .blog-content strong { color: #1f1b38; }
-    .blog-highlight {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin: 1.6rem 0;
-      padding: 1.2rem;
-      border-radius: 18px;
-      background: #f8f6ff;
-      border: 1px solid #e8e3fc;
-    }
-    .blog-highlight-icon {
-      width: 40px;
-      height: 40px;
-      flex: 0 0 40px;
-      display: grid;
-      place-items: center;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(70, 50, 150, 0.06);
-      font-size: 1.2rem;
-    }
-    .blog-highlight p { margin: 0; }
-    .blog-list {
-      padding-left: 1.4rem;
-      margin: 0.6rem 0 1.2rem;
-    }
-    .blog-list li {
-      color: #4d4a63;
-      font-size: 0.93rem;
-      line-height: 1.65;
-      margin-bottom: 0.5rem;
-      padding-left: 0.2rem;
-    }
-    .blog-list li::marker { color: #7657ff; }
-    .content-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.8rem 0 1.2rem;
-    }
-    .content-tags span {
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      background: #f5f3ff;
-      border: 1px solid #e3defa;
-      color: #5a4d8a;
-      font-size: 0.7rem;
-      font-weight: 700;
-    }
-    .steps-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.8rem;
-      margin: 1.2rem 0 1.6rem;
-    }
-    .blog-step {
-      display: flex;
-      gap: 0.8rem;
-      padding: 1rem;
-      border-radius: 16px;
-      border: 1px solid #eceafe;
-      background: #fbfaff;
-    }
-    .blog-step > span {
-      width: 30px;
-      height: 30px;
-      flex: 0 0 30px;
-      display: grid;
-      place-items: center;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #7657ff, #e956a6);
-      color: white;
-      font-size: 0.7rem;
-      font-weight: 800;
-    }
-    .blog-step p {
-      margin: 0;
-      font-size: 0.82rem;
-      line-height: 1.5;
-    }
-    .blog-step h3 {
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 2px;
-    }
+    <!-- =====================================================
+         CANONICAL
+         ===================================================== -->
 
-    /* FAQ */
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-top: 1rem;
-    }
-    .faq-list details {
-      border: 1px solid #eceafe;
-      border-radius: 14px;
-      background: #fcfbff;
-    }
-    .faq-list summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 0.9rem 1.2rem;
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: #1f1b38;
-      position: relative;
-      padding-right: 2.8rem;
-    }
-    .faq-list summary::-webkit-details-marker { display: none; }
-    .faq-list summary::after {
-      content: "+";
-      position: absolute;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.4rem;
-      color: #7657ff;
-      font-weight: 400;
-    }
-    .faq-list details[open] summary::after { content: "−"; }
-    .faq-list details p {
-      padding: 0 1.2rem 1.2rem;
-      margin: 0;
-      font-size: 0.85rem;
-      color: #4d4a63;
-    }
+    <link
+      rel="canonical"
+      href="https://instagram.anujkattel.com.np/"
+    />
 
-    .blog-warning {
-      margin: 1.6rem 0;
-      padding: 1.2rem;
-      border-radius: 16px;
-      background: #fffaf0;
-      border: 1px solid #f5d7a8;
-    }
-    .blog-warning strong {
-      display: block;
-      color: #7a4b00;
-      font-size: 0.85rem;
-      margin-bottom: 4px;
-    }
-    .blog-warning p {
-      color: #8a640f;
-      margin: 0;
-      font-size: 0.85rem;
-    }
-    .blog-footer-note {
-      margin-top: 1.8rem;
-      padding: 1.2rem;
-      border-radius: 16px;
-      background: #f8f6ff;
-      border: 1px solid #e8e3fc;
-      text-align: center;
-    }
-    .blog-footer-note strong {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 0.9rem;
-    }
-    .blog-footer-note p {
-      margin: 0;
-      font-size: 0.82rem;
-    }
+    <!-- =====================================================
+         FAVICON
+         ===================================================== -->
 
-    /* ----- FOOTER (white) ----- */
-    footer {
-      text-align: center;
-      color: #8e8aa3;
-      font-size: 0.75rem;
-      padding: 2.5rem 1rem 1.5rem;
-      width: 100%;
-      max-width: 780px;
-      margin: 2.5rem auto 0;
-      border-top: 1px solid #edeaf5;
-    }
-    footer p { margin-bottom: 0.4rem; }
-    footer a { color: #6f6a88; }
+    <link
+      rel="icon"
+      href="/icon.png"
+    />
 
-    /* ----- RESPONSIVE TWEAKS ----- */
-    @media (max-width: 640px) {
-      body { padding: 0.6rem 0.6rem 1.8rem; }
-      .hero { padding: 1rem 0 0.6rem; }
-      .download-shell {
-        flex-direction: column;
-        padding: 6px;
-        border-radius: 18px;
-      }
-      .download-shell input {
-        width: 100%;
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-      }
-      .download-btn {
-        width: 100%;
-        height: 48px;
-        min-height: 48px;
-        padding: 0 1rem;
-        font-size: 0.9rem;
-        border-radius: 14px;
-      }
-      .hero h1 { font-size: clamp(1.8rem, 9vw, 2.6rem); }
-      .subtitle { font-size: 0.9rem; margin-bottom: 1.2rem; }
-      .trust-row { gap: 0.6rem 1.2rem; font-size: 0.7rem; }
-      .result { padding: 1rem; }
-      .blog-content { padding: 1.2rem 1rem; border-radius: 20px; }
-      .steps-grid { grid-template-columns: 1fr; }
-      .blog-highlight { flex-direction: column; align-items: stretch; }
-      .blog-step { padding: 0.8rem; }
-      .two-col { gap: 1.2rem; margin-top: 1.2rem; }
-      .logo { width: 60px; height: 60px; font-size: 1.4rem; }
-    }
+    <link
+      rel="apple-touch-icon"
+      href="/icon.png"
+    />
 
-    @media (max-width: 420px) {
-      .download-shell input { padding: 0.7rem 0.8rem; font-size: 0.85rem; }
-      .download-btn { font-size: 0.85rem; height: 44px; min-height: 44px; }
-      .result-head h2 { font-size: 1rem; }
-    }
+    <!-- =====================================================
+         OPEN GRAPH
+         ===================================================== -->
 
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
-    }
+    <meta
+      property="og:type"
+      content="website"
+    />
 
-    /* Inline ad (kept minimal) */
-    .inline-ad {
-      width: 100%;
-      margin: 1.8rem 0;
-      padding: 0.6rem;
-      border: 1px solid #eceafe;
-      border-radius: 18px;
-      background: #ffffff;
-      box-shadow: 0 4px 16px rgba(35, 28, 74, 0.04);
-    }
-    .inline-ad-label {
-      text-align: center;
-      color: #b0abc6;
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 0.4rem;
-    }
-    .inline-ad-slot {
-      min-height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-radius: 12px;
-      background: #fff;
-    }
-    .hostinger-fallback {
-      display: block;
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-      border-radius: 14px;
-      overflow: hidden;
-      background: #fff;
-    }
-    .hostinger-fallback img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      background: #fff;
-    }
-    .hostinger-fallback-text {
-      padding: 4px 0 0;
-      text-align: center;
-      color: #7a748f;
-      font-size: 0.6rem;
-      font-weight: 600;
-    }
-  </style>
+    <meta
+      property="og:url"
+      content="https://instagram.anujkattel.com.np/"
+    />
 
-  <!-- Schema.org (kept unchanged) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Instagram Video Downloader",
-    "url": "https://instagram.anujkattel.com.np/",
-    "description": "Download Instagram videos and Reels online for free. Fast, simple, and mobile-friendly Instagram video downloader.",
-    "applicationCategory": "Multimedia",
-    "operatingSystem": "Any",
-    "browserRequirements": "Requires JavaScript",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "author": { "@type": "Person", "name": "Anuj Kattel" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"What is an Instagram video downloader?","acceptedAnswer":{"@type":"Answer","text":"An Instagram video downloader is an online tool that can help you save publicly accessible Instagram videos or Reels to your device using their URL."}},
-      {"@type":"Question","name":"How do I download an Instagram Reel?","acceptedAnswer":{"@type":"Answer","text":"Copy the public Reel link from Instagram, paste it into the downloader, click Download, and save the resulting video when it is ready."}},
-      {"@type":"Question","name":"Does the downloader work on Android and iPhone?","acceptedAnswer":{"@type":"Answer","text":"Yes. The website can be accessed through a modern mobile browser on Android and iPhone devices."}},
-      {"@type":"Question","name":"Do I need to install an application?","acceptedAnswer":{"@type":"Answer","text":"No. The downloader is browser-based, so you can use it directly from your web browser."}},
-      {"@type":"Question","name":"Do I need an Instagram account?","acceptedAnswer":{"@type":"Answer","text":"You do not need to provide your Instagram login credentials to use the downloader. The tool is intended for publicly accessible URLs."}},
-      {"@type":"Question","name":"Can I download private Instagram videos?","acceptedAnswer":{"@type":"Answer","text":"No. This service is intended for publicly accessible Instagram content and does not provide a way to bypass private-account restrictions."}}
-    ]
-  }
-  </script>
-</head>
-<body>
+    <meta
+      property="og:title"
+      content="Instagram Video & Reels Downloader"
+    />
 
-<div class="page">
-  <main>
+    <meta
+      property="og:description"
+      content="Download public Instagram videos and Reels online quickly and easily. Paste an Instagram URL and get your video."
+    />
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="badge"><span>✦</span> FREE &nbsp;•&nbsp; FAST &nbsp;•&nbsp; NO APP</div>
-      <div class="logo" aria-label="Instagram Downloader">IG</div>
-      <h1>Download Instagram <br><span>Videos & Reels</span></h1>
-      <p class="subtitle">The fastest and most reliable Instagram video downloader. Paste any public Instagram Reel or video URL below and save it to your device instantly.</p>
+    <meta
+      property="og:site_name"
+      content="Instagram Downloader"
+    />
 
-      <div class="download-shell">
-        <input id="urlInput" type="url" placeholder="Paste Instagram video or reel URL…" autocomplete="off" inputmode="url">
-        <button id="downloadBtn" class="download-btn" type="button">
-          <span id="buttonText">Download</span>
-          <span id="loader" class="loader hidden"></span>
-        </button>
-      </div>
+    <meta
+      property="og:locale"
+      content="en_US"
+    />
 
-      <p id="errorMessage" class="error hidden"></p>
+    <!--
+      Add this when you have a social sharing image:
 
-      <div class="trust-row" aria-label="Downloader features">
-        <span>✓ No registration</span>
-        <span>✓ Mobile friendly</span>
-        <span>✓ High quality</span>
-        <span>✓ Free forever</span>
-      </div>
-    </section>
+      <meta
+        property="og:image"
+        content="https://instagram.anujkattel.com.np/og-image.jpg"
+      />
 
-    <!-- TWO COLUMN -->
-    <div class="two-col">
-      <div class="main-col">
+      <meta
+        property="og:image:width"
+        content="1200"
+      />
 
-        <!-- RESULT CARD -->
-        <section id="resultCard" class="result hidden">
-          <div class="result-head">
-            <h2>Your Video is Ready</h2>
-            <span class="ready">✓ READY</span>
-          </div>
-          <div class="video-box">
-            <video id="videoPreview" controls playsinline preload="metadata"></video>
-          </div>
-          <div class="video-info">
-            <h3 id="videoTitle">Instagram Video</h3>
-            <p id="videoUploader">Video is ready for download.</p>
-          </div>
-          <a id="saveButton" class="save-btn" href="#" download>⬇ Download Video</a>
-        </section>
-        <a href="https://www.hostinger.com/pricing?REFERRALCODE=AT0ANUJKA2XJ" target="_blank">
-          <img src="images/hostinger.png" alt="hostinger ads image" width="100%">
-        </a>
+      <meta
+        property="og:image:height"
+        content="630"
+      />
+    -->
 
-        <!-- SEO BLOG -->
-        <section class="seo-blog">
-          <div class="blog-header">
-            <span class="blog-eyebrow">INSTAGRAM DOWNLOADER GUIDE</span>
-            <h2>Online Instagram Downloader</h2>
-            <p>Download Instagram Reels and videos online quickly, easily, and for free. No app or registration required.</p>
-          </div>
-          <article class="blog-content">
-            <h2>Download Instagram Videos & Reels Online</h2>
-            <p><strong>Instagram Video Downloader</strong> is a simple online tool that helps you download publicly available Instagram videos and Reels directly to your device. You don't need to install an application or browser extension.</p>
-            <p>Simply copy an Instagram video or Reel link, paste it into the downloader above, and start your download. Our Instagram downloader is designed to work across modern devices and browsers, including Android phones, iPhones, tablets, Windows PCs, Macs, and Linux computers.</p>
 
-            <!-- Ad placement: 728x90 (inline) -->
-            <div class="inline-ad">
-              <div class="inline-ad-label">— Sponsored —</div>
-              <div class="inline-ad-slot">
-                <iframe src="//www.highperformanceformat.com/e1c6887f4d314058fcfd928312cfe9fe" width="728" height="90" style="border:0; max-width:100%;"></iframe>
-              </div>
-            </div>
+    <!-- =====================================================
+         TWITTER / X
+         ===================================================== -->
 
-            <div class="blog-highlight">
-              <div class="blog-highlight-icon">📥</div>
-              <div>
-                <h3>Simple Instagram Video Downloads</h3>
-                <p>Copy the public Instagram Reel or video URL, paste it above, and download the available video directly to your device.</p>
-              </div>
-            </div>
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
 
-            <h2>What is an Instagram Video Downloader?</h2>
-            <p>An Instagram video downloader is an online service that allows users to save publicly available Instagram videos and Reels for offline viewing.</p>
-            <p>Instead of recording your screen or installing additional software, you can use a web browser to process the URL and download the available video.</p>
-            <p><strong>instagram.anujkattel.com.np</strong> focuses on keeping the downloading process simple. There is no complicated setup: paste a valid Instagram URL into the input field and click the Download button.</p>
+    <meta
+      name="twitter:title"
+      content="Instagram Video & Reels Downloader"
+    />
 
-            <!-- Ad placement: 300x250 -->
-            <div class="inline-ad">
-              <div class="inline-ad-label">— Sponsored —</div>
-              <div class="inline-ad-slot">
-                <iframe src="//www.highperformanceformat.com/d17ae82179681e09d8bd366e96a5c92b" width="300" height="250" style="border:0; max-width:100%;"></iframe>
-              </div>
-            </div>
+    <meta
+      name="twitter:description"
+      content="Download public Instagram videos and Reels online quickly and easily."
+    />
 
-            <h2>Why Use Our Instagram Downloader?</h2>
-            <p>There are many Instagram download tools available online, but they can sometimes be difficult to use, overloaded with unnecessary steps, or require software installations.</p>
-            <p>Our goal is to provide a clean, lightweight, and mobile-friendly experience.</p>
-            <ul class="blog-list">
-              <li><strong>Easy to use:</strong> Paste an Instagram URL and start the download process.</li>
-              <li><strong>No registration:</strong> You don't need to create an account before using the downloader.</li>
-              <li><strong>Works in your browser:</strong> No additional desktop software or browser extension is required.</li>
-              <li><strong>Mobile friendly:</strong> Use the downloader from Android, iPhone, tablet, or computer.</li>
-              <li><strong>Fast processing:</strong> The service is designed to make the downloading process quick and straightforward.</li>
-              <li><strong>Free to use:</strong> You can use the basic Instagram video downloading functionality without a paid subscription.</li>
-            </ul>
+    <!--
+      Add this when you have a social sharing image:
 
-            <!-- Ad placement: 320x50 -->
-            <div class="inline-ad">
-              <div class="inline-ad-label">— Sponsored —</div>
-              <div class="inline-ad-slot">
-                <iframe src="//www.highperformanceformat.com/6b6efee01e32941daf411ef490d5ab0c" width="320" height="50" style="border:0; max-width:100%;"></iframe>
-              </div>
-            </div>
+      <meta
+        name="twitter:image"
+        content="https://instagram.anujkattel.com.np/og-image.jpg"
+      />
+    -->
 
-            <h2>Supported Instagram Content</h2>
-            <p>Our downloader is primarily designed for publicly accessible Instagram video content.</p>
-            <p>Depending on what Instagram makes available through the supplied URL, supported content can include:</p>
-            <div class="content-tags">
-              <span>Instagram Reels</span>
-              <span>Instagram Videos</span>
-              <span>Public Posts</span>
-              <span>Video Posts</span>
-            </div>
-            <p>Private accounts and content that is not publicly accessible cannot be downloaded through this service. You should only download content when you have the necessary permission or rights to do so.</p>
 
-            <!-- Ad placement: 468x60 -->
-            <div class="inline-ad">
-              <div class="inline-ad-label">— Sponsored —</div>
-              <div class="inline-ad-slot">
-                <iframe src="//www.highperformanceformat.com/6ddbb78bf5064f6ab92b570c70ae05fc" width="468" height="60" style="border:0; max-width:100%;"></iframe>
-              </div>
-            </div>
+    <!-- =====================================================
+         PERFORMANCE
+         ===================================================== -->
 
-            <h2>How to Download Instagram Reels and Videos?</h2>
-            <div class="steps-grid">
-              <div class="blog-step">
-                <span>01</span>
-                <div>
-                  <h3>Copy the Instagram Link</h3>
-                  <p>Open Instagram and navigate to the public Reel or video you want to save. Use Instagram's share options to copy its link.</p>
-                </div>
-              </div>
-              <div class="blog-step">
-                <span>02</span>
-                <div>
-                  <h3>Paste the URL</h3>
-                  <p>Return to this website and paste the Instagram URL into the downloader input field at the top of the page.</p>
-                </div>
-              </div>
-              <div class="blog-step">
-                <span>03</span>
-                <div>
-                  <h3>Click Download</h3>
-                  <p>Click the Download button and wait while the server processes the public Instagram video URL.</p>
-                </div>
-              </div>
-              <div class="blog-step">
-                <span>04</span>
-                <div>
-                  <h3>Save Your Video</h3>
-                  <p>When the video is ready, preview it and use the Download Video button to save it to your device.</p>
-                </div>
-              </div>
-            </div>
-            <a href="https://www.hostinger.com/pricing">
-              <img src="./images/sidebar.png" alt="Image ads" width="100%">
-            </a>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
 
-            <h2>Can I Use the Instagram Downloader on Mobile?</h2>
-            <p>Yes. The website is designed to be responsive and can be used from modern mobile browsers.</p>
-            <p>You can use it on Android and iPhone devices without installing a separate application.</p>
-            <p>Simply open your browser, visit <strong>instagram.anujkattel.com.np</strong>, copy the Instagram video or Reel URL, paste it into the downloader, and follow the download steps.</p>
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
 
-            <!-- Ad placement: 160x300 -->
-            <div class="inline-ad">
-              <div class="inline-ad-label">— Sponsored —</div>
-              <div class="inline-ad-slot">
-                <iframe src="//www.highperformanceformat.com/281a994327b8eb88a8ef6183e80bf0c5" width="160" height="300" style="border:0; max-width:100%;"></iframe>
-              </div>
-            </div>
 
-            <h2>Is This Instagram Downloader Free?</h2>
-            <p>Yes. The Instagram downloader is available to use online without requiring a paid membership or account registration.</p>
-            <p>Advertising helps support the operation and maintenance of the free service.</p>
+    <!-- =====================================================
+         STRUCTURED DATA
+         ===================================================== -->
 
-            <h2>Is Instagram Video Downloader Safe?</h2>
-            <p>You do not need to provide your Instagram username or password to use this downloader.</p>
-            <p>Never enter your Instagram login credentials into a third-party downloader.</p>
-            <p>For your privacy and security, only use the downloader with public Instagram URLs and avoid submitting sensitive information.</p>
-            <p>We also recommend downloading only content that you own or have permission to save.</p>
-
-            <!-- Ad placement: 160x600 -->
-            <div class="inline-ad">
-              <div class="inline-ad-label">— Sponsored —</div>
-              <div class="inline-ad-slot">
-                <iframe src="//www.highperformanceformat.com/7a30d0deca33ac1d7b964680c8a83782" width="160" height="600" style="border:0; max-width:100%;"></iframe>
-              </div>
-            </div>
-
-            <div class="blog-warning">
-              <strong>⚠ Copyright & Privacy Notice</strong>
-              <p>Please respect the copyright, privacy, and intellectual property rights of Instagram users. Do not use downloaded content to infringe another person's copyright, privacy, or other rights.</p>
-            </div>
-
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-list">
-              <details><summary>What is an Instagram video downloader?</summary><p>An Instagram video downloader is an online tool that can help you save publicly accessible Instagram videos or Reels to your device using their URL.</p></details>
-              <details><summary>How do I download an Instagram Reel?</summary><p>Copy the public Reel link from Instagram, paste it into the downloader above, click Download, and save the resulting video when it is ready.</p></details>
-              <details><summary>Does the downloader work on Android or iPhone?</summary><p>Yes. The website can be accessed through a modern mobile browser on Android and iPhone devices.</p></details>
-              <details><summary>Do I need to install an application?</summary><p>No. The downloader is browser-based, so you can use it directly from your web browser.</p></details>
-              <details><summary>Do I need an Instagram account?</summary><p>You do not need to provide your Instagram login credentials to use the downloader. The tool is intended for publicly accessible URLs.</p></details>
-              <details><summary>Why isn't my Instagram video downloading?</summary><p>Make sure that you copied the complete Instagram URL and that the content is publicly accessible. Instagram may also change how its content is delivered, which can temporarily affect third-party downloading tools.</p></details>
-              <details><summary>Can I download private Instagram videos?</summary><p>No. This service is intended for publicly accessible Instagram content and does not provide a way to bypass private-account restrictions.</p></details>
-              <details><summary>Is this Instagram downloader affiliated with Instagram?</summary><p>No. This website is an independent third-party service and is not affiliated with, endorsed by, or sponsored by Instagram or Meta.</p></details>
-            </div>
-
-            <div class="blog-footer-note">
-              <strong>Use Instagram Downloader Responsibly</strong>
-              <p>This service is intended for downloading publicly available content that you have permission to save. Please respect creators and applicable copyright laws.</p>
-            </div>
-          </article>
-        </section>
-      </div>
-    </div>
-  </main>
-</div>
-
-<!-- ========== SCRIPTS ========== -->
-<script>
-  (function() {
-    "use strict";
-
-    // DOM refs
-    const urlInput = document.getElementById('urlInput');
-    const downloadBtn = document.getElementById('downloadBtn');
-    const buttonText = document.getElementById('buttonText');
-    const loader = document.getElementById('loader');
-    const errorMessage = document.getElementById('errorMessage');
-    const resultCard = document.getElementById('resultCard');
-    const videoPreview = document.getElementById('videoPreview');
-    const videoTitle = document.getElementById('videoTitle');
-    const videoUploader = document.getElementById('videoUploader');
-    const saveButton = document.getElementById('saveButton');
-
-    const API_URL = "http://127.0.0.1:5050";
-    let currentVideoUrl = null;
-    let downloadInProgress = false;
-
-    // helpers
-    function showError(msg) {
-      errorMessage.textContent = msg;
-      errorMessage.classList.remove('hidden');
-    }
-    function clearError() {
-      errorMessage.textContent = '';
-      errorMessage.classList.add('hidden');
-    }
-    function hideResult() {
-      resultCard.classList.add('hidden');
-    }
-    function setLoading(loading) {
-      downloadBtn.disabled = loading;
-      if (loading) {
-        buttonText.classList.add('hidden');
-        loader.classList.remove('hidden');
-      } else {
-        buttonText.classList.remove('hidden');
-        loader.classList.add('hidden');
-      }
-    }
-
-    function isInstagramUrl(value) {
-      try {
-        const parsed = new URL(value);
-        const host = parsed.hostname.toLowerCase().replace(/^www\./, '');
-        return (host === 'instagram.com' || host === 'instagram.co') &&
-               /^\/(reel|reels|p|tv)\//i.test(parsed.pathname);
-      } catch { return false; }
-    }
-
-    function requestDownload() {
-      if (downloadInProgress) return;
-      const url = urlInput.value.trim();
-      clearError();
-      if (!url) { showError('Please paste an Instagram URL.'); return; }
-      if (!isInstagramUrl(url)) { showError('Please enter a valid Instagram Reel or video URL.'); return; }
-      downloadVideo(url);
-    }
-
-    async function downloadVideo(url) {
-      if (downloadInProgress) return;
-      downloadInProgress = true;
-      setLoading(true);
-      hideResult();
-      if (currentVideoUrl) {
-        URL.revokeObjectURL(currentVideoUrl);
-        currentVideoUrl = null;
-      }
-
-      try {
-        const response = await fetch(`${API_URL}/api/instagram/download/video`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ url })
-        });
-
-        if (!response.ok) {
-          let msg = `Download failed (${response.status})`;
-          try {
-            const data = await response.json();
-            if (data.error) msg = data.error;
-            if (data.message) msg = data.message;
-          } catch {}
-          throw new Error(msg);
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Instagram Downloader",
+        "url": "https://instagram.anujkattel.com.np/",
+        "description": "Download public Instagram videos and Reels online quickly and easily.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "author": {
+          "@type": "Person",
+          "name": "Anuj Kattel",
+          "url": "https://www.anujkattel.com.np/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
         }
-
-        const blob = await response.blob();
-        if (!blob || blob.size === 0) {
-          throw new Error('The server returned an empty video.');
-        }
-
-        currentVideoUrl = URL.createObjectURL(blob);
-        videoPreview.src = currentVideoUrl;
-        videoPreview.load();
-        videoTitle.textContent = 'Instagram Video Download';
-        videoUploader.textContent = `${(blob.size / 1024 / 1024).toFixed(2)} MB • Video + Audio Ready`;
-        saveButton.href = currentVideoUrl;
-        saveButton.download = `instagram-video-${Date.now()}.mp4`;
-        resultCard.classList.remove('hidden');
-        resultCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-      } catch (err) {
-        console.error('Download error:', err);
-        showError(err.message || 'Something went wrong while downloading. Please try again.');
-      } finally {
-        setLoading(false);
-        downloadInProgress = false;
       }
-    }
+    </script>
 
-    // event listeners
-    downloadBtn.addEventListener('click', requestDownload);
-    urlInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') requestDownload();
-    });
+    <!-- =====================================================
+         WEBSITE STRUCTURED DATA
+         ===================================================== -->
 
-    window.addEventListener('beforeunload', () => {
-      if (currentVideoUrl) URL.revokeObjectURL(currentVideoUrl);
-    });
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Instagram Downloader",
+        "url": "https://instagram.anujkattel.com.np/",
+        "description": "Online Instagram video and Reels downloader."
+      }
+    </script>
 
-    // (optional) inline ad placeholder – no external scripts
-  })();
-</script>
+  </head>
 
-</body>
+  <body>
+
+    <div id="root"></div>
+
+    <script
+      type="module"
+      src="/src/main.jsx"
+    ></script>
+
+  </body>
 </html>
+

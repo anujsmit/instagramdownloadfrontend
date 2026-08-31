@@ -1,0 +1,185 @@
+/* Notfound.css */
+
+.notfound-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem;
+  margin: 0;
+}
+
+.notfound-card {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.notfound-card:hover {
+  transform: translateY(-5px);
+}
+
+.notfound-code {
+  font-size: 6rem;
+  font-weight: 800;
+  color: #2c3e50;
+  letter-spacing: 8px;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.notfound-icon {
+  font-size: 4rem;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+  display: block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.notfound-card h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0.5rem 0 1rem 0;
+  letter-spacing: -0.5px;
+}
+
+.notfound-card p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  line-height: 1.7;
+  margin: 1rem 0 2rem 0;
+  padding: 0 0.5rem;
+}
+
+.notfound-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.notfound-home-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.85rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  border: none;
+  cursor: pointer;
+}
+
+.notfound-home-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, #5a6fd6 0%, #6a3f9e 100%);
+}
+
+.notfound-home-btn:active {
+  transform: translateY(0px);
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .notfound-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .notfound-code {
+    font-size: 4.5rem;
+  }
+
+  .notfound-icon {
+    font-size: 3rem;
+  }
+
+  .notfound-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .notfound-card p {
+    font-size: 0.95rem;
+    padding: 0;
+  }
+
+  .notfound-home-btn {
+    padding: 0.75rem 2rem;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  .notfound-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .notfound-page {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  }
+
+  .notfound-card {
+    background: #2c2c3e;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  .notfound-card h1 {
+    color: #e8e8f0;
+  }
+
+  .notfound-card p {
+    color: #a8a8b8;
+  }
+
+  .notfound-code {
+    background: linear-gradient(135deg, #8b9cf7 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .notfound-icon {
+    color: #8b9cf7;
+  }
+
+  .notfound-home-btn {
+    background: linear-gradient(135deg, #8b9cf7 0%, #a78bfa 100%);
+    box-shadow: 0 4px 15px rgba(139, 156, 247, 0.3);
+  }
+
+  .notfound-home-btn:hover {
+    background: linear-gradient(135deg, #7a8cee 0%, #967ae6 100%);
+    box-shadow: 0 8px 25px rgba(139, 156, 247, 0.4);
+  }
+}
